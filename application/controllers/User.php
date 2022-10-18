@@ -20,7 +20,7 @@ class User extends CI_Controller
             'user',
             ['email' => $this->session->userdata['email']]
         )->row_array();
-
+        $data['data_gereja'] = $this->db->get('data_gereja')->row_array();
         $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar', $data);
         $this->load->view('templates/topbar', $data);
@@ -35,7 +35,7 @@ class User extends CI_Controller
             'user',
             ['email' => $this->session->userdata['email']]
         )->row_array();
-
+        $data['data_gereja'] = $this->db->get('data_gereja')->row_array();
         $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar', $data);
         $this->load->view('templates/topbar', $data);
@@ -50,7 +50,7 @@ class User extends CI_Controller
             'user',
             ['email' => $this->session->userdata['email']]
         )->row_array();
-
+        $data['data_gereja'] = $this->db->get('data_gereja')->row_array();
         $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar', $data);
         $this->load->view('templates/topbar', $data);
@@ -67,6 +67,7 @@ class User extends CI_Controller
         $this->form_validation->set_rules('name', 'Nama', 'required|trim');
 
         if ($this->form_validation->run() == FALSE) {
+            $data['data_gereja'] = $this->db->get('data_gereja')->row_array();
             $this->load->view('templates/header', $data);
             $this->load->view('templates/sidebar', $data);
             $this->load->view('templates/topbar', $data);
@@ -120,6 +121,7 @@ class User extends CI_Controller
         $this->form_validation->set_rules('new_password2', 'Confirm New Password', 'required|trim|min_length[5]|matches[new_password1]');
 
         if ($this->form_validation->run() == false) {
+            $data['data_gereja'] = $this->db->get('data_gereja')->row_array();
             $this->load->view('templates/header', $data);
             $this->load->view('templates/sidebar', $data);
             $this->load->view('templates/topbar', $data);

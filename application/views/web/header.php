@@ -10,7 +10,7 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/Logo/logo.png" rel="icon">
+  <link href="<?= base_url('assets/img/Logo/') . $data_gereja['url_logo_gereja']?>" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
@@ -36,3 +36,5 @@
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
 </head>
+
+<body>

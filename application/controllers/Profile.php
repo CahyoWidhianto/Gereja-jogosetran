@@ -15,6 +15,7 @@ class Profile extends CI_Controller
     $dataProfile = array(
       "profiles" => $profileGembala
     );
+    $data['data_gereja'] = $this->db->get('data_gereja')->row_array();
     $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
     $data['title'] = 'List Profile Gembala';
     $this->load->view('templates/header', $data);
@@ -26,7 +27,7 @@ class Profile extends CI_Controller
 
   public function tambah()
   {
-
+    $data['data_gereja'] = $this->db->get('data_gereja')->row_array();
     $data['title'] = 'Tambah Data Profile Gembala';
     $this->load->view('templates/header', $data);
     $this->load->view('templates/sidebar', $data);
@@ -75,7 +76,7 @@ class Profile extends CI_Controller
   //untuk meload tampilan form update
   public function ubah($id)
   {
-
+    $data['data_gereja'] = $this->db->get('data_gereja')->row_array();
     $data['title'] = 'Ubah Data Profile Gembala';
     $this->load->view('templates/header', $data);
     $this->load->view('templates/sidebar', $data);
@@ -130,7 +131,7 @@ class Profile extends CI_Controller
 
   public function hapus($id)
   {
-
+    $data['data_gereja'] = $this->db->get('data_gereja')->row_array();
     $data['title'] = 'Anda Yakin Hapus Data Ini ..?';
     $this->load->view('templates/header', $data);
     $this->load->view('templates/sidebar', $data);

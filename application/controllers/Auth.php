@@ -15,6 +15,7 @@ class Auth extends CI_Controller
         $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email');
         $this->form_validation->set_rules('password', 'Password', 'trim|required');
         if ($this->form_validation->run() == FALSE) {
+            $data['data_gereja'] = $this->db->get('data_gereja')->row_array();
             $data['title'] = 'Login Page';
             $this->load->view('templates/auth_header', $data);
             $this->load->view('auth/login');
@@ -74,6 +75,7 @@ class Auth extends CI_Controller
 
 
         if ($this->form_validation->run() == FALSE) {
+            $data['data_gereja'] = $this->db->get('data_gereja')->row_array();
             $data['title'] = 'Registration';
             $this->load->view('templates/auth_header', $data);
             $this->load->view('auth/registration');

@@ -16,6 +16,7 @@ class Warta extends CI_Controller
         );
         $data['title'] = "Warta";
         $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+        $data['data_gereja'] = $this->db->get('data_gereja')->row_array();
         $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar', $data);
         $this->load->view('templates/topbar', $data);
@@ -26,6 +27,7 @@ class Warta extends CI_Controller
     //untuk meload  form tambah tampilan barang
     public function tambah()
     {
+        $data['data_gereja'] = $this->db->get('data_gereja')->row_array();
         $data['title'] = "Tambah Warta";
         $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar', $data);
@@ -77,6 +79,7 @@ class Warta extends CI_Controller
     //untuk meload tampilan form update
     public function ubah($id)
     {
+        $data['data_gereja'] = $this->db->get('data_gereja')->row_array();
         $data['title'] = "Ubah Warta";
         $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar', $data);
@@ -132,6 +135,7 @@ class Warta extends CI_Controller
 
     public function hapus($id)
     {
+        $data['data_gereja'] = $this->db->get('data_gereja')->row_array();
         $data['title'] = "Hapus Warta";
         $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar', $data);

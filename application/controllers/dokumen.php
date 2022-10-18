@@ -13,6 +13,7 @@ class Dokumen extends CI_Controller
     function index()
     {
         $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+        $data['data_gereja'] = $this->db->get('data_gereja')->row_array();
         $data['title'] = "Dokumen Gereja";
         $data['dokumen'] = $this->m_dokumen->show_data()->result();
         $this->load->view('templates/header', $data);
@@ -24,6 +25,7 @@ class Dokumen extends CI_Controller
 
     function create()
     {
+        $data['data_gereja'] = $this->db->get('data_gereja')->row_array();
         $data['title'] = "Tambah Dokumen Gereja";
         $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar', $data);
@@ -67,6 +69,7 @@ class Dokumen extends CI_Controller
 
     function edit($id)
     {
+        $data['data_gereja'] = $this->db->get('data_gereja')->row_array();
         $data['title'] = "Ubah Dokumen Gereja";
         $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar', $data);
@@ -115,6 +118,7 @@ class Dokumen extends CI_Controller
     }
 
     public function hapus($id){
+        $data['data_gereja'] = $this->db->get('data_gereja')->row_array();
         $data['title'] = "Hapus Dokumen";
         $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar', $data); 

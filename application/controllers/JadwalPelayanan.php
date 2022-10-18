@@ -16,6 +16,7 @@ class JadwalPelayanan extends CI_Controller
       $data = array(
          "jadwal" => $jadwalPelayanan
       );
+      $data['data_gereja'] = $this->db->get('data_gereja')->row_array();
       $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
       $data['title'] = "Jadwal Pelayanan";
       $this->load->view('templates/header', $data);
@@ -26,6 +27,7 @@ class JadwalPelayanan extends CI_Controller
    }
    public function tambah()
    {
+      $data['data_gereja'] = $this->db->get('data_gereja')->row_array();
       $data['title'] = "Jadwal Pelayanan";
       $this->load->view('templates/header', $data);
       $this->load->view('templates/sidebar', $data);
@@ -63,6 +65,7 @@ class JadwalPelayanan extends CI_Controller
 
    function edit($id)
    {
+      $data['data_gereja'] = $this->db->get('data_gereja')->row_array();
       $data['title'] = "Ubah Jadwal";
       $this->load->view('templates/header', $data);
       $this->load->view('templates/sidebar', $data);
@@ -105,6 +108,7 @@ class JadwalPelayanan extends CI_Controller
    }
    public function hapus($id)
    {
+      $data['data_gereja'] = $this->db->get('data_gereja')->row_array();
       $data['title'] = "Jadwal Pelayanan";
       $this->load->view('templates/header', $data);
       $this->load->view('templates/sidebar', $data);

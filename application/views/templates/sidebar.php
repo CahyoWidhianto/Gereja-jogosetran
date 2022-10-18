@@ -4,7 +4,7 @@
      <!-- Sidebar - Brand -->
      <a class="sidebar-brand d-flex align-items-center justify-content-center">
          <div class="sidebar-brand-icon">
-             <img src="<?= base_url('/assets/img/Logo/Logo.png') ?>" class="img-circle elevation-2" width="40" height="43">
+             <img src="<?= base_url('/assets/img/Logo/') . $data_gereja['url_logo_gereja'] ?>" class="img-circle elevation-2" width="40" height="43">
          </div>
          <div class="sidebar-brand-text mx-3">Jogosetran Admin </div>
      </a>

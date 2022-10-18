@@ -16,6 +16,7 @@ class Sosmed extends CI_Controller
         $data = array(
             "sosmeds" => $dataSosmed
         ); 
+        $data['data_gereja'] = $this->db->get('data_gereja')->row_array();
         $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
         $data['title'] = "Sosial Media"; 
         $this->load->view('templates/header', $data);
@@ -27,6 +28,7 @@ class Sosmed extends CI_Controller
 
     // untuk me-load tampilan form tambah barang
     public function tambah(){
+        $data['data_gereja'] = $this->db->get('data_gereja')->row_array();
         $data['title'] = "Sosial Media"; 
         $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar', $data);
@@ -48,6 +50,7 @@ class Sosmed extends CI_Controller
 
     public function ubah($id)
     {
+        $data['data_gereja'] = $this->db->get('data_gereja')->row_array();
         $data['title'] = "Sosial Media"; 
         $sosmed = $this->M_sosmed->getByPrimaryKey($id);
         $data = array(
@@ -73,6 +76,7 @@ class Sosmed extends CI_Controller
     }
 
     public function hapus($id) {
+        $data['data_gereja'] = $this->db->get('data_gereja')->row_array();
         $data['title'] = "Sosial Media"; 
         $sosmed = $this->M_sosmed->getByPrimaryKey($id);
         $data = array(

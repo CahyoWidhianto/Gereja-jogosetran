@@ -14,6 +14,7 @@ class Dokumentasi extends CI_Controller
       $dokumentasiGereja  =  array(
          "dokumentasis" => $dokumentasi
       );
+      $data['data_gereja'] = $this->db->get('data_gereja')->row_array();
       $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
       $data['title'] = "Dokumentasi Gereja";
       $this->load->view('templates/header', $data);
@@ -25,6 +26,7 @@ class Dokumentasi extends CI_Controller
 
    public function tambah()
    {
+      $data['data_gereja'] = $this->db->get('data_gereja')->row_array();
       $data['title'] = "Dokumentasi Gereja";
       $this->load->view('templates/header', $data);
       $this->load->view('templates/sidebar', $data);
@@ -68,6 +70,7 @@ class Dokumentasi extends CI_Controller
 
    public function ubah($id)
    {
+      $data['data_gereja'] = $this->db->get('data_gereja')->row_array();
       $data['title'] = "Dokumentasi Gereja";
       $this->load->view('templates/header', $data);
       $this->load->view('templates/sidebar', $data);
@@ -118,6 +121,7 @@ class Dokumentasi extends CI_Controller
 
    public function hapus($id)
    {
+      $data['data_gereja'] = $this->db->get('data_gereja')->row_array();
       $data['title'] = "Dokumentasi Gereja";
       $this->load->view('templates/header', $data);
       $this->load->view('templates/sidebar', $data);

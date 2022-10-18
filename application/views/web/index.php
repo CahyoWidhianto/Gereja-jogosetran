@@ -1,4 +1,4 @@
-<body>
+
 
   <!-- ======= Header ======= -->
   <header id="header" class="header d-flex align-items-center fixed-top">
@@ -6,7 +6,7 @@
 
       <a href="index.html" class="logo d-flex align-items-center">
         <!-- Uncomment the line below if you also wish to use an image logo -->
-        <img src="assets/img/Logo/logo.png" alt="">
+        <img src="<?= base_url('assets/img/Logo/') . $data_gereja['url_logo_gereja']?>" alt="">
         <h1><?= $data_gereja['nama_gereja'] ?></h1>
       </a>
 
@@ -100,22 +100,32 @@
     </div><!-- End Breadcrumbs -->
     </section><!-- End About Us Section -->
 
-     <!-- ======= Pastor Section ======= -->
+    <!-- ======= Pastor Section ======= -->
+    <div class="breadcrumbs">
+        <nav>
+          <div class="container">
+            <ol>
+              <li><a href="#pastor">Home</a></li>
+              <li>Pastor</li>
+            </ol>
+          </div>
+        </nav>
 
-     <section id="pastor" class="call-to-action" style="background: linear-gradient(rgba(14, 29, 52, 0.6), rgba(14, 29, 52, 0.8)), url('<?=base_url('assets/img/profileGembala/') . $profile_gembala['gambar']?>') center center;
+        <section id="pastor" class="call-to-action" style="background: linear-gradient(rgba(14, 29, 52, 0.6), rgba(14, 29, 52, 0.8)), url('<?= base_url('assets/img/profileGembala/') . $profile_gembala['gambar'] ?>') center center;
       background-size: cover;
       padding: 100px 0;">
-      <div class="container" data-aos="zoom-out">
+          <div class="container" data-aos="zoom-out">
 
-        <div class="row justify-content-center">
-          <div class="col-lg-8 text-center">
-            <h3>Ps. <?= $profile_gembala['nama_gembala'] ?></h3>
-            <p><?= $profile_gembala['kata_pengantar'] ?></p>
-            <a class="cta-btn" href="#">Selengkapnya</a>
+            <div class="row justify-content-center">
+              <div class="col-lg-8 text-center">
+                <h3>Ps. <?= $profile_gembala['nama_gembala'] ?></h3>
+                <p><?= $profile_gembala['kata_pengantar'] ?></p>
+                <a class="cta-btn" href="<?= site_url('web/gembala')?>">Selengkapnya</a>
+              </div>
+            </div>
           </div>
-        </div>
+    </div>
 
-      </div>
     </section>
     <!-- End pastor Section -->
 
@@ -233,5 +243,3 @@
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
-
-</body>

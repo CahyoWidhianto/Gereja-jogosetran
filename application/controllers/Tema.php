@@ -15,6 +15,7 @@ class Tema extends CI_Controller
         $datatema = array(
             'temas' => $tema
         );
+        $data['data_gereja'] = $this->db->get('data_gereja')->row_array();
         $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
         $data['title'] = "Tema Gereja";
         $this->load->view('templates/header', $data);
@@ -26,6 +27,7 @@ class Tema extends CI_Controller
 
     public function Tambah()
     {
+        $data['data_gereja'] = $this->db->get('data_gereja')->row_array();
         $data['title'] = "Tema Gereja";
         $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar', $data);
@@ -76,6 +78,7 @@ class Tema extends CI_Controller
         $datatema =  array(
             'tema' => $tema
         );
+        $data['data_gereja'] = $this->db->get('data_gereja')->row_array();
         $data['title'] = "Tema Gereja";
         $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar', $data);
@@ -124,6 +127,7 @@ class Tema extends CI_Controller
 
     public function hapus($id)
     {
+        $data['data_gereja'] = $this->db->get('data_gereja')->row_array();
         $tema = $this->M_tema->getByPrimaryKey($id);
         $datatema =  array(
             'tema' => $tema

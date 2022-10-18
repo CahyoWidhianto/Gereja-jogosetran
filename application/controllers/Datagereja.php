@@ -14,6 +14,7 @@ class Datagereja extends CI_Controller
          "gerejas" => $dataGereja
       );
       $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+      $data['data_gereja'] = $this->db->get('data_gereja')->row_array();
       $data['title'] = "Data Gereja";
       $this->load->view('templates/header', $data);
       $this->load->view('templates/sidebar', $data);
@@ -24,6 +25,7 @@ class Datagereja extends CI_Controller
 
    public function tambah()
    {
+      $data['data_gereja'] = $this->db->get('data_gereja')->row_array();
       $data['title'] = "Data Gereja";
       $this->load->view('templates/header', $data);
       $this->load->view('templates/sidebar', $data);
@@ -75,6 +77,7 @@ class Datagereja extends CI_Controller
       $data = array(
          "datagereja" => $datagereja,
       );
+      $data['data_gereja'] = $this->db->get('data_gereja')->row_array();
       $data['title'] = "Data Gereja";
       $this->load->view('templates/header', $data);
       $this->load->view('templates/sidebar', $data);
@@ -123,6 +126,7 @@ class Datagereja extends CI_Controller
 
    public function hapus($id)
    {
+      $data['data_gereja'] = $this->db->get('data_gereja')->row_array();
       $data['title'] = "Hapus Data Gereja";
       $this->load->view('templates/header', $data);
       $this->load->view('templates/sidebar', $data);

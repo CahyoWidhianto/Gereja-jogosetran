@@ -15,7 +15,7 @@
                                 <div class="text-center">
                                     <h1 class="h4 text-gray-900 mb-4">Login Page</h1>
                                     <div class="text-center">
-                                        <img src="<?= base_url('/assets/img/logo/Logo.png') ?>" width="140" height="143">
+                                        <img src="<?= base_url('/assets/img/Logo/') . $data_gereja['url_logo_gereja']?>" width="140" height="143">
                                     </div> <br>
                                 </div>
 
