@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Web extends CI_Controller
+class WebDokumen extends CI_Controller
 {
     public function index() {
         $data['title'] = 'Gereja Jogosetran';
@@ -15,7 +15,7 @@ class Web extends CI_Controller
         $data['sosial_media'] = $this->db->get('sosial_media')->row_array();
         $data['tema'] = $this->db->get('tema')->row_array();
         $this->load->view('web/header', $data);
-        $this->load->view('web/index', $data);
+        $this->load->view('web/dokumen', $data);
         $this->load->view('web/footer', $data);
     }
 

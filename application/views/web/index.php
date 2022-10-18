@@ -1,53 +1,5 @@
 
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-
-      <a href="index.html" class="logo d-flex align-items-center">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <img src="<?= base_url('assets/img/Logo/') . $data_gereja['url_logo_gereja']?>" alt="">
-        <h1><?= $data_gereja['nama_gereja'] ?></h1>
-      </a>
-
-      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
-      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a href="#hero" class="active">Home</a></li>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#pastor"> Pastor</a></li>
-          <li><a href="#media">Media</a></li>
-          <li><a href="#location">Location</a></li>
-          <li><a href="#footer">Contact</a></li>
-        </ul>
-      </nav><!-- .navbar -->
-
-    </div>
-  </header><!-- End Header -->
-  <!-- End Header -->
-
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="hero d-flex align-items-center" style="background-image: url('<?= base_url('assets/img/tema/') . $tema['gambar'] ?>'); width: 100%;
-  min-height: 50vh;
-  background-color: var(--color-secondary); 
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  padding: 120px 0 60px 0;
-  color: rgba(17, 17, 17, 0.8);">
-    <div class="container">
-      <div class="row gy-4 d-flex justify-content-between">
-        <div class="col-8"></div>
-        <div class="col-lg-4 order-2 order-lg-1 d-flex flex-column content-center">
-          <h2 data-aos="fade-up"><?= $tema['judul_tema'] ?></h2>
-          <div>
-            <h6 data-aos="fade-up"><?= $tema['isi_tema'] ?></h6>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section><!-- End Hero Section -->
 
   <main id="main">
 
@@ -120,7 +72,7 @@
               <div class="col-lg-8 text-center">
                 <h3>Ps. <?= $profile_gembala['nama_gembala'] ?></h3>
                 <p><?= $profile_gembala['kata_pengantar'] ?></p>
-                <a class="cta-btn" href="<?= site_url('web/gembala')?>">Selengkapnya</a>
+                <a class="cta-btn" href="<?= site_url('webgembala')?>">Selengkapnya</a>
               </div>
             </div>
           </div>
@@ -155,34 +107,34 @@
             <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
               <div class="card">
 
-                <h3><a href="service-details.html" class="stretched-link">Warta</a></h3>
+                <h3><a href="<?= site_url('WebWarta')?>" class="stretched-link">Warta</a></h3>
               </div>
             </div><!-- End Card Item -->
 
             <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
               <div class="card">
 
-                <h3><a href="service-details.html" class="stretched-link">Pengumuman</a></h3>
+                <h3><a href="<?= site_url('webpengumuman')?>" class="stretched-link">Pengumuman</a></h3>
               </div>
             </div><!-- End Card Item -->
 
             <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
               <div class="card">
 
-                <h3><a href="service-details.html" class="stretched-link">Jadwal Pelayanan</a></h3>
+                <h3><a href="<?= site_url('webjadwal')?>" class="stretched-link">Jadwal Pelayanan</a></h3>
               </div>
             </div><!-- End Card Item -->
 
             <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
               <div class="card">
 
-                <h3><a href="service-details.html" class="stretched-link">Dokumen</a></h3>
+                <h3><a href="<?= site_url('webdokumen')?>" class="stretched-link">Dokumen</a></h3>
               </div>
             </div><!-- End Card Item -->
 
             <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
               <div class="card">
-                <h3><a href="service-details.html" class="stretched-link">Galeri</a></h3>
+                <h3><a href="<?= site_url('webgaleri')?>" class="stretched-link">Galeri</a></h3>
               </div>
             </div><!-- End Card Item -->
 
