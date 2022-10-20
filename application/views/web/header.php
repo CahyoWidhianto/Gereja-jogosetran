@@ -54,12 +54,12 @@
       <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a href="#hero" class="active">Home</a></li>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#pastor"> Pastor</a></li>
-          <li><a href="#media">Media</a></li>
-          <li><a href="#location">Location</a></li>
-          <li><a href="#footer">Contact</a></li>
+          <li><a href="<?= base_url('web#hero') ?>" class="active">Home</a></li>
+          <li><a href="<?= base_url('web#about') ?>">About Us</a></li>
+          <li><a href="<?= base_url('web#pastor') ?>"> Pastor</a></li>
+          <li><a href="<?= base_url('web#media') ?>">Media</a></li>
+          <li><a href="<?= base_url('web#location') ?>">Location</a></li>
+          <li><a href="<?= base_url('web#footer') ?>">Contact</a></li>
         </ul>
       </nav><!-- .navbar -->
 
@@ -67,24 +67,4 @@
   </header><!-- End Header -->
   <!-- End Header -->
 
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="hero d-flex align-items-center" style="background-image: url('<?= base_url('assets/img/tema/') . $tema['gambar'] ?>'); width: 100%;
-  min-height: 50vh;
-  background-color: var(--color-secondary); 
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  padding: 120px 0 60px 0;
-  color: rgba(17, 17, 17, 0.8);">
-    <div class="container">
-      <div class="row gy-4 d-flex justify-content-between">
-        <div class="col-8"></div>
-        <div class="col-lg-4 order-2 order-lg-1 d-flex flex-column content-center">
-          <h2 data-aos="fade-up"><?= $tema['judul_tema'] ?></h2>
-          <div>
-            <h6 data-aos="fade-up"><?= $tema['isi_tema'] ?></h6>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section><!-- End Hero Section -->
+  

@@ -1,25 +1,22 @@
+<section></section>
+<!-- ======= About Us Section ======= -->
+<section id="about" class="about">
+  <div class="container" data-aos="fade-up">
 
-<body>
-
-  <main id="main">
-    <!-- ======= About Us Section ======= -->
-    <section id="about" class="about">
-      <div class="container" data-aos="fade-up">
-
-        <div class="row gy-4">
-          <div class="col-lg-6 position-relative align-self-start order-lg-last order-first">
-            <img src="<?= base_url('assets/img/profileGembala/') . $profile_gembala['gambar'] ?>" alt="">
-            <!-- <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox play-btn"></a> -->
-          </div>
-          <div class="col-lg-6 content order-last  order-lg-first">
-            <h3>About Pastor</h3>
-            <p>
-              <?= $profile_gembala['deskripsi_gembala'] ?>
-            </p>
-            <p>
-              <?= $profile_gembala['riwayat_pendidikan'] ?>
-            </p>
-            <!-- <ul>
+    <div class="row gy-4">
+      <div class="col-lg-6 position-relative align-self-start order-lg-last order-first">
+        <img src="<?= base_url('assets/img/profileGembala/') . $profile_gembala['gambar'] ?>" alt="" width="650">
+        <!-- <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox play-btn"></a> -->
+      </div>
+      <div class="col-lg-6 content order-last  order-lg-first">
+        <h3>About Pastor</h3>
+        <p>
+          <?= $profile_gembala['deskripsi_gembala'] ?>
+        </p>
+        <p>
+          <?= $profile_gembala['riwayat_pendidikan'] ?>
+        </p>
+        <!-- <ul>
               <li data-aos="fade-up" data-aos-delay="100">
                 <i class="bi bi-diagram-3"></i>
                 <div>
@@ -42,9 +39,8 @@
                 </div>
               </li>
             </ul> -->
-          </div>
-        </div>
-
       </div>
-    </section><!-- End About Us Section -->
-  </main><!-- End #main -->
+    </div>
+
+  </div>
+</section><!-- End About Us Section -->
