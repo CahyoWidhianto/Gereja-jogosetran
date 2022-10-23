@@ -1,22 +1,36 @@
-<section></section>
 <!-- ======= About Us Section ======= -->
-<section id="about" class="about">
-  <div class="container" data-aos="fade-up">
-
-    <div class="row gy-4">
-      <div class="col-lg-6 position-relative align-self-start order-lg-last order-first">
-        <img src="<?= base_url('assets/img/profileGembala/') . $profile_gembala['gambar'] ?>" alt="" width="650">
-        <!-- <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox play-btn"></a> -->
+<div class="breadcrumbs">
+  <section id="galeri" class="about ">
+    <nav>
+      <div class="container">
+        <ol>
+          <li><a href="<?= base_url('web#hero') ?>">Home</a></li>
+          <li>Pastor</li>
+        </ol>
       </div>
-      <div class="col-lg-6 content order-last  order-lg-first">
-        <h3>About Pastor</h3>
-        <p>
-          <?= $profile_gembala['deskripsi_gembala'] ?>
-        </p>
-        <p>
-          <?= $profile_gembala['riwayat_pendidikan'] ?>
-        </p>
-        <!-- <ul>
+    </nav>
+    <div class="container" data-aos="fade-up">
+
+      <div class="section-header">
+        <span>Pastor</span>
+        <h2>Pastor</h2>
+
+      </div>
+
+      <div class="row gy-4">
+        <div class="col-lg-6 position-relative align-self-start order-lg-last order-first">
+          <img src="<?= base_url('assets/img/profileGembala/') . $profile_gembala['gambar'] ?>" alt="" width="650">
+          <!-- <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox play-btn"></a> -->
+        </div>
+        <div class="col-lg-6 content order-last  order-lg-first">
+          <h3><?= $profile_gembala['nama_gembala'] ?></h3>
+          <p>
+            <?= $profile_gembala['deskripsi_gembala'] ?>
+          </p>
+          <p>
+            <?= $profile_gembala['riwayat_pendidikan'] ?>
+          </p>
+          <!-- <ul>
               <li data-aos="fade-up" data-aos-delay="100">
                 <i class="bi bi-diagram-3"></i>
                 <div>
@@ -39,8 +53,9 @@
                 </div>
               </li>
             </ul> -->
+        </div>
       </div>
-    </div>
 
-  </div>
-</section><!-- End About Us Section -->
+    </div>
+  </section><!-- End About Us Section -->
+</div>

@@ -10,6 +10,10 @@
                <input required class="form-control col-5" name="judul_warta" placeholder="Masukan Judul Warta " type="text">
             </div>
             <div class="form-group">
+               <label for="">Ayat</label>
+               <input required class="form-control col-5" name="ayat" placeholder="Masukan ayat Warta " type="text">
+            </div>
+            <div class="form-group">
                <label for="">Jenis Warta</label>
                <select class="form-select" name="jenis_warta" aria-label="Floating label select example">
                   <option selected disabled>Masukan Jenis Warta</option>

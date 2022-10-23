@@ -10,6 +10,10 @@
                <input value="<?= $warta->judul_warta ?>" required class="form-control col-6" name="judul_warta" placeholder="Masukan Judul Warta " type="text">
             </div>
             <div class="form-group">
+               <label for="">Ayat </label>
+               <input value="<?= $warta->ayat ?>" required class="form-control col-6" name="ayat" placeholder="Masukan Judul Warta " type="text">
+            </div>
+            <div class="form-group">
                <label for="">Jenis Warta</label>
                <input value="<?= $warta->jenis_warta ?>" required class="form-control col-6" name="jenis_warta" placeholder="Masukan Jenis Warta" type="text">
                <select class="form-select" name="jenis_warta" id="floatingSelect" aria-label="Floating label select example">
