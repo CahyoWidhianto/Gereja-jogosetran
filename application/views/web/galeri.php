@@ -1,10 +1,9 @@
-
 <div class="breadcrumbs">
     <section id="galeri" class="about ">
         <nav>
             <div class="container">
                 <ol>
-                    <li><a href="<?= base_url('web#hero')?>">Home</a></li>
+                    <li><a href="<?= base_url('web#hero') ?>">Home</a></li>
                     <li>Media</li>
                 </ol>
             </div>
@@ -48,5 +47,6 @@
                     </div>
 
                 </div>
+            </div>
     </section><!-- End About Us Section -->
 </div>
