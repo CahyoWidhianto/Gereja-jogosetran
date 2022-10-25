@@ -5,9 +5,9 @@
             <h3>Data Pengumuman</h3>
         </div>
         <div class="card-body">
-            <a class="btn btn-outline-primary mb-3" href="<?= base_url('pengumuman/tambah') ?>">
-                <i class="fa fa-plus"></i>Tambah Pengumuman
-            </a>
+            <a href="<?= site_url('pengumuman/tambah') ?>" class="btn btn-outline-primary mb-3">
+                <i class="fa fa-plus"></i>
+                Tambah Data Gereja</a>
             <table class="table table-bordered table-hover">
                 <thead class="table-dark text-white">
                     <tr>

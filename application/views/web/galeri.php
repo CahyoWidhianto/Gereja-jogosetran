@@ -3,8 +3,8 @@
         <nav>
             <div class="container">
                 <ol>
-                    <li><a href="<?= base_url('web#hero') ?>">Home</a></li>
-                    <li>Media</li>
+                    <li><a href="<?= base_url('web#media') ?>">Media</a></li>
+                    <li>Galeri</li>
                 </ol>
             </div>
         </nav>

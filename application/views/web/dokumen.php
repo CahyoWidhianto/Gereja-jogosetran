@@ -6,8 +6,8 @@
         <nav>
             <div class="container">
                 <ol>
-                    <li><a href="<?= base_url('web#hero') ?>">Home</a></li>
-                    <li>Pastor</li>
+                    <li><a href="<?= base_url('web#media') ?>">Media</a></li>
+                    <li>Dokumen</li>
                 </ol>
             </div>
         </nav>
