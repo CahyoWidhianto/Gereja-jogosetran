@@ -32,7 +32,7 @@
                                     <h4><?= $w->judul_warta ?></h4>
                                     <span><?= $w->ayat ?></span>
                                     <div class="text-center">
-                                        <a class="btn btn-sm btn-primary text-white" href="<?= site_url("webwarta/Isi/$w->kd_warta") ?>">
+                                        <a class="btn btn-sm btn-primary text-white" href="<?= site_url("webwartacontent/index/$w->kd_warta") ?>">
                                             <i class="far fa-eye"></i>
                                         </a>
                                     </div>
