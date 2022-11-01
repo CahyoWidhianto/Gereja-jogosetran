@@ -20,6 +20,8 @@ class webwartaContent extends CI_Controller
         $data['data_gereja'] = $this->db->get('data_gereja')->row_array();
         $data['sosial_media'] = $this->db->get('sosial_media')->row_array();
         $data['tema'] = $this->db->get('tema')->row_array();
+        $this->load->view('web/header', $data);
         $this->load->view('web/wartacontent', $data);
+        $this->load->view('web/footer', $data);
     }
 }

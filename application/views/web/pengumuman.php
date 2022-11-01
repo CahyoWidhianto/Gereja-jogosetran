@@ -30,7 +30,7 @@
                 <tbody>
                     <?php
                     $no = 1;
-                    foreach ($pengumuman as $p) {
+                    foreach (array_reverse($pengumuman) as $p) {
                     ?>
                         <tr class="text-center">
                             <td><?= $no++ ?></td>
@@ -66,7 +66,7 @@
             </div>
         </div>
         <div class="container" data-aos="fade-up">
-            <p> Download Jadwal disini
+            <p> Download Jadwal disini 
                 <a class="" href="<?= base_url('assets/jadwal/') . $jadwalpelayanan['Berkas'] ?>" download="<?= $jadwalpelayanan['Berkas'] ?>">
                     <?= $jadwalpelayanan['Berkas'] ?>
                 </a>

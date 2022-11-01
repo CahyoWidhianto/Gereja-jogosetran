@@ -15,7 +15,7 @@ class WebPengumuman extends CI_Controller
             "pengumuman" => $dataPengumuman
         ); 
         $data['data_gereja'] = $this->db->get('data_gereja')->row_array();
-        $data['jadwalpelayanan'] = $this->db->get('jadwalpelayanan')->row_array();
+        $data['jadwalpelayanan'] = $this->db->get_where('jadwalpelayanan', ['Berkas'])->row_array();
         $data['sosial_media'] = $this->db->get('sosial_media')->row_array();
         $data['tema'] = $this->db->get('tema')->row_array();
         $data['title'] = 'Gereja Jogosetran';
