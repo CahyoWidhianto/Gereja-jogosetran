@@ -22,19 +22,14 @@
             <table class="table table-bordered table-hover">
                 <thead class="table-dark text-white">
                     <tr class="text-center">
-                        <th>Nomor</th>
-                        <th>Tanggal</th>
-                        <th>Pengumuman</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php
-                    $no = 1;
                     foreach (array_reverse($pengumuman) as $p) {
                     ?>
                         <tr class="text-center">
-                            <td><?= $no++ ?></td>
-                            <td><?= $p->tgl_pengumuman  ?></td>
                             <td><?= $p->isi_pengumuman ?></td>
                         </tr>
                     <?php

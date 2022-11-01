@@ -19,13 +19,12 @@
             </div>
 
             <div class="row" data-aos="fade-up" data-aos-delay="100">
+                <?php
+                $no = 1;
+                foreach (array_reverse($wartas) as $w) {
+                ?>
 
-                <div class="col-lg-4 col-md-6 d-flex">
-                    <?php
-                    $no = 1;
-                    foreach ($wartas as $w) {
-                    ?>
-                        <div class="container margin-left-3">
+                    <!-- <div class="container margin-left-3">
                             <div class="member">
                                 <img src="<?= base_url() . '/assets/img/warta/' . $w->gambar ?>" class="img-fluid">
                                 <div class="member-content">
@@ -38,11 +37,37 @@
                                     </div>
                                 </div>
                             </div>
+                        </div> -->
+
+
+
+                    <section id="team" class="team pt-0">
+                        <div class="container" data-aos="fade-up">
+                            <div class="row" data-aos="fade-up" data-aos-delay="100">
+
+                                <div class="col-lg-4 col-md-6 d-flex">
+                                </div><!-- End Team Member -->
+
+                                <div class="col-lg-4 col-md-6 d-flex">
+                                    <div class="member">
+                                        <img src="<?= base_url() . '/assets/img/warta/' . $w->gambar ?>" class="img-fluid" alt="">
+                                        <div class="member-content">
+                                            <h4><a href="<?= site_url("webwartacontent/index/$w->kd_warta") ?>"><?= $w->judul_warta ?></a></h4>
+                                            <span><?= $w->ayat ?></span>
+                                        </div>
+                                    </div>
+                                </div><!-- End Team Member -->
+
+                                <div class="col-lg-4 col-md-6 d-flex">
+                                </div><!-- End Team Member -->
+
+                            </div>
+
                         </div>
-                    <?php
-                    }
-                    ?>
-                </div><!-- End Team Member -->
+                    </section><!-- End Our Team Section -->
+                <?php
+                }
+                ?>
             </div>
 
         </div>

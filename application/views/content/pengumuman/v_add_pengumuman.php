@@ -1,57 +1,28 @@
 <div class="container-fluid mt-3">
     <div class="card">
         <div class="card-header bg-secondary text-white">
-            <h3 class="card-title">Form Tambah Pengumuman</h3>
+            <h3 class="card-title">Form Tambah Pengumuman </h3>
         </div>
         <div class="card-body">
-            <form id="form-tambah-pengumuman" method="post" action="<?= site_url('pengumuman/insert') ?>" enctype="multipart/form-data">
-
+            <form action="<?= base_url('pengumuman/insert') ?>" method="post" enctype="multipart/form-data">
                 <div class="form-group">
-                    <label class="form-label">Isi Pengumuman</label>
-                    <textarea class="form-control col-5" name="isi_pengumuman" cols="" rows="" placeholder="Masukan Isi Pengumuman"></textarea>
+                    <label for="">Isi pengumuman</label>
+                    <textarea required class="form-control col-5" name="isi_pengumuman" placeholder="Masukan Isi Pengumuman" type="text"></textarea>
                 </div>
                 <div class="form-group">
-                    <label class="form-label">Tanggal Pengumuman</label>
-                    <input require type="date" class="form-control col-5" name="tgl_pengumuman">
+                    <label for="">Tanggal Pengumuman</label>
+                    <input required class="form-control col-5" name="tgl_pengumuman" placeholder="Masukan Tanggal" type="date">
                 </div>
-                <div class="card-footer">
-                    <a href="<?= site_url('pengumuman') ?>" class="btn btn-primary ">
-                        <i class="fa fa-reply"></i> Kembali
-                    </a>
-                    <button type="button" id="btn-save-pengumuman" class="btn btn-success ">
-                        <i class="fa fa-save"></i> Simpan Pengumuma
-                    </button>
-                </div>
-            </form>
         </div>
+        <div class="card-footer">
+            <a class="btn btn-primary" href="<?= base_url('pengumuman') ?>">
+                <i class="fa fa-reply"></i> Kembali </a>
+            </a>
+            <button class="btn btn-success">
+                <i class="fa fa-save"></i>
+                Simpan
+            </button>
+        </div>
+        </form>
     </div>
 </div>
-
-<script>
-    $(function() {
-        $("#btn-save-pengumuman").on("click", function() {
-            let validate = $("#form-tambah-pengumuman").valid()
-            if (validate) {
-                $("#form-tambah-pengumuman").submit()
-            }
-        })
-        $("#form-tambah-pengumuman").validates({
-            rules: {
-                harga_pengumuman: {
-                    digits: true
-                },
-                jumlah_pengumuman: {
-                    digits: true
-                }
-            },
-            errorElement: 'span',
-            errorPlacement: function(error, element) {
-                error.addClass('invalid-feedback');
-                element.closest('.form-group').append(error);
-            },
-            highlight: function(element, errorClass, validClass) {
-                $(element).addClass('is-invalid');
-            }
-        })
-    })
-</script>

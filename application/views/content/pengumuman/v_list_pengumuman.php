@@ -7,7 +7,7 @@
         <div class="card-body">
             <a href="<?= site_url('pengumuman/tambah') ?>" class="btn btn-outline-primary mb-3">
                 <i class="fa fa-plus"></i>
-                Tambah Data Gereja</a>
+                Tambah Data Pengumuman</a>
             <table class="table table-bordered table-hover">
                 <thead class="table-dark text-white">
                     <tr>
@@ -33,6 +33,8 @@
                                 <a href="<?= site_url("pengumuman/hapus/$p->id_pengumuman") ?>" data-id="<?= $p->id_pengumuman ?>" class="btn btn-danger btn-sm btn-delete-barang">
                                     <i class="fa fa-trash"></i>
                                 </a>
+
+
                             </td>
                         </tr>
                     <?php
