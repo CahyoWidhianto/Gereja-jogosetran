@@ -19,25 +19,30 @@
             </div>
         </div>
         <div class="container" data-aos="fade-up">
-            <table class="table table-bordered table-hover">
-                <thead class="table-dark text-white">
-                    <tr class="text-center">
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php
-                    foreach (array_reverse($pengumuman) as $p) {
-                    ?>
-                        <tr class="text-center">
-                            <td><?= $p->isi_pengumuman ?></td>
-                        </tr>
-                    <?php
-                    }
-                    ?>
+            <div class="table-responsive">
 
-                </tbody>
-            </table>
+                <table class="table table-bordered table-hover">
+                    <thead class="table-dark text-white">
+                        <tr class="text-center">
+                            <th>Pengumuman</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+                        $no = 0;
+                        foreach ($pengumuman as $p) {
+                        ?>
+                            <tr class="text-center">
+                                <td><?= $p->isi_pengumuman ?></td>
+                            </tr>
+                        <?php
+                            if (++$no == 3) break;
+                        }
+                        ?>
+
+                    </tbody>
+                </table>
+            </div>
         </div>
     </section><!-- End About Us Section -->
 </div>
@@ -61,8 +66,9 @@
             </div>
         </div>
         <div class="container" data-aos="fade-up">
-            <p> Download Jadwal disini 
-                <a class="" href="<?= base_url('assets/jadwal/') . $jadwalpelayanan['Berkas'] ?>" download="<?= $jadwalpelayanan['Berkas'] ?>">
+            <p> Download Jadwal disini
+                <a class="" href="
+                <?= base_url('assets/jadwal/') . $jadwalpelayanan['Berkas'] ?>" download="<?= $jadwalpelayanan['Berkas'] ?>">
                     <?= $jadwalpelayanan['Berkas'] ?>
                 </a>
             </p>
