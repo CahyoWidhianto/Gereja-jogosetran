@@ -10,6 +10,7 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
+
   <link href="<?= base_url('assets/img/Logo/') . $data_gereja['url_logo_gereja'] ?>" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
@@ -27,7 +28,7 @@
   <link href="<?= base_url() ?>assets/vendor/aos/aos.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="<?=base_url() ?>assets/css/main.css" rel="stylesheet">
+  <link href="<?= base_url() ?>assets/css/main.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: Logis - v1.2.0
@@ -66,5 +67,3 @@
     </div>
   </header><!-- End Header -->
   <!-- End Header -->
-
-  
