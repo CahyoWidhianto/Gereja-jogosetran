@@ -1,3 +1,4 @@
+<section></section>
 <!-- ======= About Us Section ======= -->
 <div class="breadcrumbs">
   <section id="galeri" class="about ">

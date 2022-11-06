@@ -7,7 +7,7 @@
             <form action="<?= base_url('pengumuman/insert') ?>" method="post" enctype="multipart/form-data">
                 <div class="form-group">
                     <label for="">Isi pengumuman</label>
-                    <textarea required class="form-control col-5" name="isi_pengumuman" placeholder="Masukan Isi Pengumuman" type="text"></textarea>
+                    <textarea required class="form-control col-5" name="isi_pengumuman" placeholder="Masukan Isi Pengumuman" type="text" required></textarea>
                 </div>
                 <div class="form-group">
                     <label for="">Tanggal Pengumuman</label>

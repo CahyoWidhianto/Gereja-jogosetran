@@ -13,7 +13,7 @@
                <label for="">Ayat </label>
                <input value="<?= $warta->ayat ?>" required class="form-control col-6" name="ayat" placeholder="Masukan Judul Warta " type="text">
             </div>
-            <div class="form-group">
+            <!-- <div class="form-group">
                <label for="">Jenis Warta</label>
                <input value="<?= $warta->jenis_warta ?>" required class="form-control col-6" name="jenis_warta" placeholder="Masukan Jenis Warta" type="text">
                <select class="form-select" name="jenis_warta" id="floatingSelect" aria-label="Floating label select example">
@@ -22,14 +22,14 @@
                   <option selected="DUKA" <?= $warta->jenis_warta == 'Informasi Duka' ? 'Selected' : '' ?>>Informasi Duka</option>
                   <option selected="KHOTBAH" <?= $warta->jenis_warta == 'Informasi Khotbah' ? 'Selected' : '' ?>>Informasi Khotbah</option>
                </select>
-            </div>
+            </div> -->
             <div class="form-group">
                <label for="">Tanggal Warta</label>
                <input value="<?= $warta->tgl_warta ?>" required class="form-control col-6" name="tgl_warta" placeholder="" type="date">
             </div>
             <div class="form-group">
                <label for="">Isi Warta</label>
-               <textarea class="form-control col-6" name="isi_warta" cols="" rows="" placeholder="Masukan Isi Warta"><?= $warta->isi_warta ?></textarea>
+               <textarea class="form-control col-6" name="isi_warta" cols="" rows="" placeholder="Masukan Isi Warta"  required><?= $warta->isi_warta ?></textarea>
             </div>
             <div class="row">
                <div class="col-sm-3">

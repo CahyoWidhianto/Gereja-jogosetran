@@ -8,7 +8,7 @@
 
                 <div class="form-group">
                     <label class="form-label">Isi Pengumuman</label>
-                    <textarea require type="text"  class="form-control col-5" name="isi_pengumuman"><?= $pengumuman->isi_pengumuman ?></textarea>
+                    <textarea require type="text"  class="form-control col-5" name="isi_pengumuman" required><?= $pengumuman->isi_pengumuman ?></textarea>
                 </div>
                 <div class="form-group">
                     <label class="form-label">Tanggal Pengumuman</label>

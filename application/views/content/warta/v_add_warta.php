@@ -13,19 +13,19 @@
                <label for="">Ayat</label>
                <input required class="form-control col-5" name="ayat" placeholder="Masukan ayat Warta " type="text">
             </div>
-            <div class="form-group">
+            <!-- <div class="form-group">
                <label for="">Jenis Warta</label>
-               <select class="form-select" name="jenis_warta" aria-label="Floating label select example">
+               <select class="form-select" name="jenis_warta" aria-label="Floating label select example" required>
                   <option selected disabled>Masukan Jenis Warta</option>
                   <option value="Laporan Persembahan dan Keuangan">LPK</option>
                   <option value="Informasi Duka">DUKA</option>
                   <option value="Informasi Suka">SUKA</option>
                   <option value="Informasi Khotbah">KHOTBAH</option>
                </select>
-            </div>
+            </div> -->
             <div class="form-group">
                <label for="">Isi Warta</label>
-               <textarea class="form-control col-5" name="isi_warta" cols="30"  placeholder="Masukan Isi Warta"></textarea>
+               <textarea class="form-control col-5" name="isi_warta" cols="30" placeholder="Masukan Isi Warta" required></textarea>
             </div>
             <div class="form-group">
                <label for="">Tanggal Warta</label>

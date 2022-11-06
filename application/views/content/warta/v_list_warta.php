@@ -19,7 +19,6 @@
                               <th>Nomor</th>
                               <th>Judul Warta</th>
                               <th>Ayat Warta</th>
-                              <th>Jenis Warta</th>
                               <th>Tanggal Warta</th>
                               <th>Isi Warta</th>
                               <th>Gambar</th>
@@ -35,7 +34,6 @@
                                  <td><?= $no++ ?></td>
                                  <td><?= $w->judul_warta  ?></td>
                                  <td><?= $w->ayat  ?></td>
-                                 <td><?= $w->jenis_warta ?></td>
                                  <td><?= $w->tgl_warta ?></td>
                                  <td><?= $w->isi_warta ?></td>
                                  <td><img src="<?= base_url() . "./assets/img/warta/" . $w->gambar ?>" width="200px;"></td>
