@@ -7,7 +7,7 @@
                <h3 class="card-title">Profile Gembala</h3>
             </div>
             <div class="card-body ">
-               <a class="btn btn-outline-primary mb-3" href="<?= base_url("profile/tambah") ?>">
+               <a class="btn btn-outline-primary mb-3" href="<?= base_url("Profile/tambah") ?>">
                   <i class="fa fa-plus"></i>
                   Tambah Data Gembala
                </a>
@@ -39,10 +39,10 @@
                               <td><?= $p->riwayat_pendidikan ?></td>
                               <td><img src="<?= base_url() . '/assets/img/profileGembala/' . $p->gambar ?> " width="200px;"></td>
                               <td>
-                                 <a class=" btn btn-warning btn-sm" href="<?= base_url("profile/ubah/$p->id_gembala") ?>">
+                                 <a class=" btn btn-warning btn-sm" href="<?= base_url("Profile/ubah/$p->id_gembala") ?>">
                                     <i class="fa fa-edit"></i>
                                  </a>
-                                 <a class="btn btn-danger btn-sm" href="<?= base_url("profile/hapus/$p->id_gembala") ?>">
+                                 <a class="btn btn-danger btn-sm" href="<?= base_url("Profile/hapus/$p->id_gembala") ?>">
                                     <i class="fa fa-trash-alt"></i>
                                  </a>
                               </td>

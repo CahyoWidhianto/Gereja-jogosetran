@@ -4,7 +4,7 @@
          <h3 class="card-title">Form Ubah Warta</h3>
       </div>
       <div class="card-body">
-         <form id="form-update-warta" action="<?= site_url('warta/update') ?>" method="post" enctype="multipart/form-data">
+         <form id="form-update-warta" action="<?= site_url('Warta/update') ?>" method="post" enctype="multipart/form-data">
             <div class="form-group">
                <label for="">Judul Warta</label>
                <input value="<?= $warta->judul_warta ?>" required class="form-control col-6" name="judul_warta" placeholder="Masukan Judul Warta " type="text">
@@ -45,7 +45,7 @@
             <input type="hidden" name="kd_warta" value="<?= $warta->kd_warta ?>">
       </div>
       <div class="card-footer">
-         <a class="btn btn-primary" href="<?= site_url('warta/index') ?>">
+         <a class="btn btn-primary" href="<?= site_url('Warta/index') ?>">
             <i class="fa fa-reply"></i> Kembali</a>
          </a>
          <button class="btn btn-warning" id="btn-update-warta">

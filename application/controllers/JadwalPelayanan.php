@@ -106,6 +106,7 @@ class JadwalPelayanan extends CI_Controller
       $this->M_jadwalPelayanan->update($id, $data);
       redirect('jadwalpelayanan');
    }
+   
    public function hapus($id)
    {
       $data['data_gereja'] = $this->db->get('data_gereja')->row_array();

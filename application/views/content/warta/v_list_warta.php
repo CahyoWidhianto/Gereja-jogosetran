@@ -7,7 +7,7 @@
                   <h3 class="bg-blue">Warta Gereja</h3>
                </div>
                <div class=" card-body">
-                  <a class="btn btn-outline-primary mb-3" href="<?= base_url('warta/tambah') ?>">
+                  <a class="btn btn-outline-primary mb-3" href="<?= base_url('Warta/tambah') ?>">
                      <i class="fa fa-plus"></i>
                      Tambah Warta
                   </a>
@@ -39,10 +39,10 @@
                                  <td><img src="<?= base_url() . "./assets/img/warta/" . $w->gambar ?>" width="200px;"></td>
                                  <td>
 
-                                    <a href="<?= site_url("warta/ubah/$w->kd_warta") ?>" class="btn btn-sm btn-warning">
+                                    <a href="<?= site_url("Warta/ubah/$w->kd_warta") ?>" class="btn btn-sm btn-warning">
                                        <i class="fa fa-edit"></i>
                                     </a>
-                                    <a href="<?= site_url("warta/hapus/$w->kd_warta") ?>" data-id="<?= $w->kd_warta ?>" class="btn btn-sm btn-danger btn-delete-warta">
+                                    <a href="<?= site_url("Warta/hapus/$w->kd_warta") ?>" data-id="<?= $w->kd_warta ?>" class="btn btn-sm btn-danger btn-delete-warta">
                                        <i class="fa fa-trash"></i>
                                     </a>
 

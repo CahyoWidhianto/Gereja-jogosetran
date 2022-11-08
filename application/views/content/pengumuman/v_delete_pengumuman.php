@@ -4,7 +4,7 @@
          <h3 class="card-title">Form Hapus Pengumuman</h3>
       </div>
       <div class="card-body">
-         <form id="form-delete-gembala" action="<?= site_url('pengumuman/delete') ?>" method="post">
+         <form id="form-delete-gembala" action="<?= site_url('Pengumuman/delete') ?>" method="post">
             <div class="form-group">
                <label for="">Isi Pengumuman</label>
                <input value="<?= $pengumumans->isi_pengumuman ?>" readonly class="form-control col-5" name="isi_pengumuman" type="text">
@@ -18,7 +18,7 @@
             <input type="hidden" name="id_pengumuman" value="<?= $pengumumans->id_pengumuman ?>">
       </div>
       <div class="card-footer">
-         <a class="btn btn-primary" href="<?= site_url('pengumuman') ?>">
+         <a class="btn btn-primary" href="<?= site_url('Pengumuman') ?>">
             <i class="fa fa-reply"></i> Kembali</a>
          </a>
          <button class="btn btn-danger" id="btn-hapus-pengumuman">

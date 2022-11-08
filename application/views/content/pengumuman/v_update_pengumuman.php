@@ -4,7 +4,7 @@
             <h3>Form Ubah Pengumuman</h3>
         </div>
         <div class="card-body">
-            <form id="form-tambah-pengumuman" method="post" action="<?= site_url('pengumuman/update') ?>" enctype="multipart/form-data">
+            <form id="form-tambah-pengumuman" method="post" action="<?= site_url('Pengumuman/update') ?>" enctype="multipart/form-data">
 
                 <div class="form-group">
                     <label class="form-label">Isi Pengumuman</label>
@@ -18,7 +18,7 @@
                 <input type="hidden" name="id_pengumuman" value="<?= $pengumuman->id_pengumuman ?>">
         </div>
         <div class="card-footer">
-            <a href="<?= site_url('pengumuman') ?>" class="btn btn-primary">
+            <a href="<?= site_url('Pengumuman') ?>" class="btn btn-primary">
                 <i class="fa fa-reply"></i> Kembali
             </a>
             <button class="btn btn-warning" id="btn-update-pengumuman">

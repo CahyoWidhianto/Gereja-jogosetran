@@ -31,10 +31,10 @@
                                         <td><?= $j->Waktu ?></td>
                                         <td><?= $j->Berkas ?></td>
                                         <td>
-                                            <a href="<?= site_url("jadwalpelayanan/edit/$j->KD_jadwalpelayanan") ?>" class="btn btn-warning btn-sm">
+                                            <a href="<?= site_url("JadwalPelayanan/edit/$j->KD_jadwalpelayanan") ?>" class="btn btn-warning btn-sm">
                                                 <i class="fa fa-edit"></i>
                                             </a>
-                                            <a href="<?= site_url("jadwalpelayanan/hapus/$j->KD_jadwalpelayanan") ?>" data-id="<?= $j->KD_jadwalpelayanan ?>" class="btn btn-danger btn-sm btn-delete-dokumen">
+                                            <a href="<?= site_url("JadwalPelayanan/hapus/$j->KD_jadwalpelayanan") ?>" data-id="<?= $j->KD_jadwalpelayanan ?>" class="btn btn-danger btn-sm btn-delete-dokumen">
                                                 <i class="fa fa-trash"></i>
                                             </a>
                                             <a class="btn btn-sm btn-success text-white" href="<?= base_url('assets/jadwal/' . $j->Berkas) ?>" download="<?= $j->Berkas ?>">

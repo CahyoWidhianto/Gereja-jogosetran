@@ -4,7 +4,7 @@
          <h3 class="card-title">Form Ubah Data Gereja</h3>
       </div>
       <div class="card-body">
-         <form id="form-update-gereja" action="<?= site_url('datagereja/update') ?>" method="post" enctype="multipart/form-data">
+         <form id="form-update-gereja" action="<?= site_url('DataGereja/update') ?>" method="post" enctype="multipart/form-data">
             <div class="row">
 
                <div class="col-6">
@@ -61,7 +61,7 @@
             <input type="hidden" name="id_gereja" value="<?= $datagereja->id_gereja ?>">
       </div>
       <div class="card-footer">
-         <a class="btn btn-primary" href="<?= site_url('dataGereja/index') ?>">
+         <a class="btn btn-primary" href="<?= site_url('DataGereja/index') ?>">
             <i class="fa fa-reply"></i> Kembali</a>
          <button class="btn btn-warning" id="btn-update-Gereja">
             <i class="fa fa-save"></i>

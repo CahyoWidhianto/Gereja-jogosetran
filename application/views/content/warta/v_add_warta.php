@@ -4,7 +4,7 @@
          <h3 class="card-title">Form Tambah Warta</h3>
       </div>
       <div class="card-body">
-         <form id="form-add-warta" action="<?= site_url('warta/insert') ?>" method="post" enctype="multipart/form-data">
+         <form id="form-add-warta" action="<?= site_url('Warta/insert') ?>" method="post" enctype="multipart/form-data">
             <div class="form-group">
                <label for="">Judul Warta</label>
                <input required class="form-control col-5" name="judul_warta" placeholder="Masukan Judul Warta " type="text">
@@ -37,7 +37,7 @@
             </div>
       </div>
       <div class="card-footer">
-         <a class="btn btn-primary" href="<?= site_url('warta/index') ?>">Kembali</a>
+         <a class="btn btn-primary" href="<?= site_url('Warta/index') ?>">Kembali</a>
          <button class="btn btn-success" id="btn-save-warta">
             <i class="fa fa-save"></i>
             Simpan Data Warta

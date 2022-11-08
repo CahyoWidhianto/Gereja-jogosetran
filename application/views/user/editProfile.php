@@ -7,7 +7,7 @@
     <div class="row">
         <div class="col-lg-8">
 
-            <form action="<?= base_url('user/editProfile') ?>" method="post" enctype="multipart/form-data">
+            <form action="<?= base_url('User/editProfile') ?>" method="post" enctype="multipart/form-data">
                 <div class="form-group row">
                     <label for="email" class="col-sm-2 col-form-label">Email</label>
                     <div class="col-sm-10">

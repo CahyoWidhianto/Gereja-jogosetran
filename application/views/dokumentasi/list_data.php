@@ -5,7 +5,7 @@
       <h3 class="card-title">Dokumentasi Gereja</h3>
    </div>
       <div class="card-body">
-         <a class="btn btn-outline-primary mb-3" href="<?= base_url('dokumentasi/tambah') ?>">
+         <a class="btn btn-outline-primary mb-3" href="<?= base_url('Dokumentasi/tambah') ?>">
             <i class="fa fa-plus"></i>
             Tambah Dokumentasi
          </a>
@@ -31,10 +31,10 @@
                      <td><?= $dokument->tanggal_dokumentasi ?></td>
                      <td><img src="<?= base_url() . '/gambar/' . $dokument->gambar ?> " width="200px;"></td>
                      <td>
-                        <a class=" btn btn-sm btn-warning" href="<?= base_url("dokumentasi/ubah/$dokument->id_dokumentasi") ?>">
+                        <a class=" btn btn-sm btn-warning" href="<?= base_url("Dokumentasi/ubah/$dokument->id_dokumentasi") ?>">
                            <i class="fa fa-edit"></i>
                         </a>
-                        <a class="btn btn-sm btn-danger" href="<?= base_url("dokumentasi/hapus/$dokument->id_dokumentasi ") ?>">
+                        <a class="btn btn-sm btn-danger" href="<?= base_url("Dokumentasi/hapus/$dokument->id_dokumentasi ") ?>">
                            <i class="fa fa-trash-alt"></i>
                         </a>
                      </td>

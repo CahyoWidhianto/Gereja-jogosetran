@@ -93,35 +93,38 @@ class Datagereja extends CI_Controller
       $config['max_height']           = 10000;
 
       $this->load->library('upload', $config);
+      $nama_gereja = $this->input->post('nama_gereja', TRUE);
+      $tgl_berdiri_gereja  = $this->input->post('tgl_berdiri_gereja', TRUE);
+      $visi_gereja = $this->input->post('visi_gereja', TRUE);
+      $misi_gereja  = $this->input->post('misi_gereja', TRUE);
+      $deskripsi_gereja = $this->input->post('deskripsi_gereja', TRUE);
+      $alamat_gereja  = $this->input->post('alamat_gereja', TRUE);
+      $kontak_gereja = $this->input->post('kontak_gereja', TRUE);
+      $email_gereja = $this->input->post('email_gereja', TRUE);
+      $id = $this->input->post('id_gereja');
+      $data = array(
+         "nama_gereja" => $nama_gereja,
+         "tgl_berdiri_gereja" => $tgl_berdiri_gereja,
+         "visi_gereja" => $visi_gereja,
+         "misi_gereja" => $misi_gereja,
+         "deskripsi_gereja" => $deskripsi_gereja,
+         "alamat_gereja" => $alamat_gereja,
+         "kontak_gereja" => $kontak_gereja,
+         "email_gereja" => $email_gereja
+      );
 
-      if (!$this->upload->do_upload('userfile')) {
-         echo "data gagal dikirim";
+      if ($this->upload->do_upload('userfile')) {
+         $old_image = $data['data_gereja']['url_logo_gereja'];
+         if ($old_image != 'default.png') {
+            unlink(FCPATH . './assets/img/Logo/' . $old_image);
+         }
+         $new_image = $this->upload->data('file_name');
+         $this->db->set('url_logo_gereja', $new_image);
       } else {
-         $url_logo_gereja = $this->upload->data();
-         $url_logo_gereja = $url_logo_gereja['file_name'];
-         $nama_gereja = $this->input->post('nama_gereja', TRUE);
-         $tgl_berdiri_gereja  = $this->input->post('tgl_berdiri_gereja', TRUE);
-         $visi_gereja = $this->input->post('visi_gereja', TRUE);
-         $misi_gereja  = $this->input->post('misi_gereja', TRUE);
-         $deskripsi_gereja = $this->input->post('deskripsi_gereja', TRUE);
-         $alamat_gereja  = $this->input->post('alamat_gereja', TRUE);
-         $kontak_gereja = $this->input->post('kontak_gereja', TRUE);
-         $email_gereja = $this->input->post('email_gereja', TRUE);
-         $id = $this->input->post('id_gereja');
-         $data = array(
-            "nama_gereja" => $nama_gereja,
-            "tgl_berdiri_gereja" => $tgl_berdiri_gereja,
-            "visi_gereja" => $visi_gereja,
-            "misi_gereja" => $misi_gereja,
-            "deskripsi_gereja" => $deskripsi_gereja,
-            "alamat_gereja" => $alamat_gereja,
-            "kontak_gereja" => $kontak_gereja,
-            "email_gereja" => $email_gereja,
-            "url_logo_gereja" => $url_logo_gereja
-         );
-         $this->ModelGereja->update($id, $data);
-         redirect('dataGereja');
-      }
+         echo $this->upload->display_errors();
+       }
+      $this->ModelGereja->update($id, $data);
+      redirect('dataGereja');
    }
 
    public function hapus($id)
@@ -149,5 +152,4 @@ class Datagereja extends CI_Controller
       </div>');
       redirect('datagereja');
    }
-
 }

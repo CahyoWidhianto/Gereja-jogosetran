@@ -55,12 +55,12 @@
       <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a href="<?= base_url('web#hero') ?>" class="active">Home</a></li>
-          <li><a href="<?= base_url('web#about') ?>">About Us</a></li>
-          <li><a href="<?= base_url('web#pastor') ?>"> Pastor</a></li>
-          <li><a href="<?= base_url('web#media') ?>">Media</a></li>
-          <li><a href="<?= base_url('web#location') ?>">Location</a></li>
-          <li><a href="<?= base_url('web#footer') ?>">Contact</a></li>
+          <li><a href="<?= base_url('Web#hero') ?>" class="active">Home</a></li>
+          <li><a href="<?= base_url('Web#about') ?>">About Us</a></li>
+          <li><a href="<?= base_url('Web#pastor') ?>"> Pastor</a></li>
+          <li><a href="<?= base_url('Web#media') ?>">Media</a></li>
+          <li><a href="<?= base_url('Web#location') ?>">Location</a></li>
+          <li><a href="<?= base_url('Web#footer') ?>">Contact</a></li>
         </ul>
       </nav><!-- .navbar -->
 

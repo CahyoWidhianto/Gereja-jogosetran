@@ -5,7 +5,7 @@
     <nav>
       <div class="container">
         <ol>
-          <li><a href="<?= base_url('web#hero') ?>">Home</a></li>
+          <li><a href="<?= base_url('Web#hero') ?>">Home</a></li>
           <li>Pastor</li>
         </ol>
       </div>

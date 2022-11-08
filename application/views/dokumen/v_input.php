@@ -4,7 +4,7 @@
             <h3>Form Tambah Dokumen</h3>
         </div>
         <div class="card-body">
-            <?php echo form_open_multipart('dokumen/create_action') ?>
+            <?php echo form_open_multipart('Dokumen/create_action') ?>
             <div class="form-group">
                 <label class="form-label">Nama dokumen</label>
                 <input require type="text" class="form-control col-5" name="nama_dokumen" required="">
@@ -28,7 +28,7 @@
         </div>
         
         <div class="card-footer">
-            <a href="<?= site_url('dokumen') ?>" class="btn btn-primary ">
+            <a href="<?= site_url('Dokumen') ?>" class="btn btn-primary ">
                 <i class="fa fa-reply"></i> Kembali</a>
             </a>
             <button type="submit" id="btn-save-dokumen" class="btn btn-success ">

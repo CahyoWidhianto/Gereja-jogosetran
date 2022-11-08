@@ -25,7 +25,7 @@
                 </div>
 
                 <card class="footer">
-                    <a class=" btn btn-warning btn-sm" href="<?= base_url('user/editProfile') ?>">
+                    <a class=" btn btn-warning btn-sm" href="<?= base_url('User/editProfile') ?>">
                         <i class="fa fa-fw fa-user-edit"></i>
                         edit Profile
                     </a>

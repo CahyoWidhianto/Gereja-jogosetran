@@ -6,7 +6,7 @@
                <h3 class="bg-secondary">Data Gereja</h3>
             </div>
             <div class=" card-body">
-               <a href="<?= site_url('datagereja/tambah') ?>" class="btn btn-outline-primary mb-3">
+               <a href="<?= site_url('DataGereja/tambah') ?>" class="btn btn-outline-primary mb-3">
                   <i class="fa fa-plus"></i>
                   Tambah Data Gereja</a>
                <div class="container-fluid">
@@ -46,10 +46,10 @@
                                  <td><img src="<?= base_url() . '/assets/img/Logo/' . $gereja->url_logo_gereja ?>" width="200px;"></td>
                                  <td>
 
-                                    <a href="<?= site_url("datagereja/ubah/$gereja->id_gereja") ?>" class="btn btn-sm btn-warning">
+                                    <a href="<?= site_url("DataGereja/ubah/$gereja->id_gereja") ?>" class="btn btn-sm btn-warning">
                                        <i class="fa fa-edit"></i>
                                     </a>
-                                    <a href="<?= base_url("datagereja/hapus/$gereja->id_gereja") ?>" data-id="<?= $gereja->id_gereja ?> " class="btn btn-sm btn-danger btn-delete-gereja">
+                                    <a href="<?= base_url("DataGereja/hapus/$gereja->id_gereja") ?>" data-id="<?= $gereja->id_gereja ?> " class="btn btn-sm btn-danger btn-delete-gereja">
                                        <i class="fa fa-trash"></i>
                                     </a>
 

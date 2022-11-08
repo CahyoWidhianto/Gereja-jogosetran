@@ -4,7 +4,7 @@
       <h3 class="card-title text-light">Form Hapus Data Gereja</h3>
    </div>
       <div class="card-body">
-         <form action="<?= base_url('datagereja/delete') ?>" method="POST">
+         <form action="<?= base_url('DataGereja/delete') ?>" method="POST">
             <div class="row">
                <div class="col-6">
                   <div class="form-group">
@@ -17,7 +17,7 @@
             </div>
       </div>
       <div class="card-footer">
-         <a class="btn btn-primary" href="<?= base_url('datagereja') ?>">
+         <a class="btn btn-primary" href="<?= base_url('DataGereja') ?>">
          <i class="fa fa-reply"></i> Kembali</a>
          </a>
          <button class="btn btn-danger">

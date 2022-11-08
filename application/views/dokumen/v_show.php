@@ -7,7 +7,7 @@
                     <h3>Data Dokumen</h3>
                 </div>
                 <div class="card-body">
-                    <a href="<?= site_url('dokumen/create') ?>" class="btn btn-outline-primary mb-3">
+                    <a href="<?= site_url('Dokumen/create') ?>" class="btn btn-outline-primary mb-3">
                         <i class="fa fa-plus"></i>Tambah Dokumen
                     </a>
                     <div class="table-responsive">
@@ -37,10 +37,10 @@
                                         <td><?= $d->tgl_dokumen ?></td>
                                         <td><?= $d->file ?></td>
                                         <td>
-                                            <a href="<?= site_url("dokumen/edit/$d->no_dokumen") ?>" class="btn btn-warning btn-sm">
+                                            <a href="<?= site_url("Dokumen/edit/$d->no_dokumen") ?>" class="btn btn-warning btn-sm">
                                                 <i class="fa fa-edit"></i>
                                             </a>
-                                            <a href="<?= site_url("dokumen/hapus/$d->no_dokumen") ?>" data-id="<?= $d->no_dokumen ?>" class="btn btn-danger btn-sm btn-delete-dokumen">
+                                            <a href="<?= site_url("Dokumen/hapus/$d->no_dokumen") ?>" data-id="<?= $d->no_dokumen ?>" class="btn btn-danger btn-sm btn-delete-dokumen">
                                                 <i class="fa fa-trash"></i>
                                             </a>
                                             <a class="btn btn-sm btn-success text-white" href="<?= base_url('assets/file/' . $d->file) ?>" download="<?= $d->file ?>">

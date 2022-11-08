@@ -97,37 +97,35 @@ class Profile extends CI_Controller
 
     $this->load->library('upload', $config);
 
-    if (!$this->upload->do_upload('userfile')) 
-    {
-      echo "Gagal Dikirim";
-    } 
-    else 
-    {
-      $gambar = $this->upload->data();
-      $gambar = $gambar['file_name'];
-      $nama_gembala = $this->input->post('nama_gembala');
-      $deskripsi_gembala = $this->input->post('deskripsi_gembala');
-      $riwayat_pendidikan = $this->input->post('riwayat_pendidikan');
-      $id = $this->input->post('id_gembala');
-      $data = array(
-        "nama_gembala" => $nama_gembala, 
-        "deskripsi_gembala" => $deskripsi_gembala,
-        "riwayat_pendidikan" => $riwayat_pendidikan,
-        "gambar" => $gambar
-
-      );
-      $id = $this->ProfileGembala->update($id,$data);
-      $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
-    Data Berhasil Ditambahkan
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>');
-    redirect('profile');
-    }
-    
+    $nama_gembala = $this->input->post('nama_gembala');
+    $deskripsi_gembala = $this->input->post('deskripsi_gembala');
+    $riwayat_pendidikan = $this->input->post('riwayat_pendidikan');
+    $id = $this->input->post('id_gembala');
+    $data = array(
+      "nama_gembala" => $nama_gembala,
+      "deskripsi_gembala" => $deskripsi_gembala,
+      "riwayat_pendidikan" => $riwayat_pendidikan,
+    );
+      if ($this->upload->do_upload('userfile')) {
+        $old_image = $data['profile_gembala']['gambar'];
+        if ($old_image != 'default.png') {
+          unlink(FCPATH . './assets/img/profileGembala/' . $old_image);
+        }
+        $new_image = $this->upload->data('file_name');
+        $this->db->set('gambar', $new_image);
+      } else {
+        echo $this->upload->display_errors();
+      }
+      $id = $this->ProfileGembala->update($id, $data);
+      // $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
+      //   Data Berhasil Diedit
+      //   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      //     <span aria-hidden="true">&times;</span>
+      //   </button>
+      // </div>');
+      redirect('profile');
   }
-  
+
 
   public function hapus($id)
   {
@@ -146,12 +144,12 @@ class Profile extends CI_Controller
   {
     $id = $this->input->post('id_gembala');
     $this->ProfileGembala->delete($id);
-    $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
-        Data Berhasil Di Hapus
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>');
+    // $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+    //     Data Berhasil Di Hapus
+    //     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    //       <span aria-hidden="true">&times;</span>
+    //     </button>
+    //   </div>');
     redirect('profile');
   }
 }

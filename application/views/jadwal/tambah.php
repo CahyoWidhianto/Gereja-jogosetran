@@ -4,7 +4,7 @@
             <h3>Form Tambah Jadwal</h3>
         </div>
         <div class="card-body">
-            <?php echo form_open_multipart('jadwalpelayanan/insert') ?>
+            <?php echo form_open_multipart('JadwalPelayanan/insert') ?>
             <div class="form-group">
                 <label class="form-label">Tanggal dokumen</label>
                 <input require type="date" class="form-control col-5" name="waktu" required="">
@@ -16,7 +16,7 @@
         </div>
 
         <div class="card-footer">
-            <a href="<?= site_url('jadwalpelayanan') ?>" class="btn btn-primary ">
+            <a href="<?= site_url('JadwalPelayanan') ?>" class="btn btn-primary ">
                 <i class="fa fa-reply"></i> Kembali</a>
             </a>
             <button type="submit" id="btn-save-dokumen" class="btn btn-success ">

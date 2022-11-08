@@ -14,7 +14,7 @@
         <div class="col-lg-4 order-2 order-lg-1 d-flex flex-column content-center">
           <h2 data-aos="fade-up"><?= $tema['judul_tema'] ?></h2>
           <div>
-            <h6 data-aos="fade-up"><?= $tema['isi_tema'] ?></h6>
+            <h6 data-aos="fade-up" class="text-white"><?= $tema['isi_tema'] ?></h6>
           </div>
         </div>
       </div>
@@ -89,7 +89,7 @@
           <div class="col-lg-8 text-center">
             <h3>Ps. <?= $profile_gembala['nama_gembala'] ?></h3>
             <p><?= $profile_gembala['kata_pengantar'] ?></p>
-            <a class="cta-btn" href="<?= site_url('webgembala') ?>">Selengkapnya</a>
+            <a class="cta-btn" href="<?= site_url('WebGembala') ?>">Selengkapnya</a>
           </div>
         </div>
       </div>
@@ -131,27 +131,27 @@
           <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="200">
             <div class="card">
 
-              <h3><a href="<?= site_url('webpengumuman') ?>" class="stretched-link">Pengumuman</a></h3>
+              <h3><a href="<?= site_url('WebPengumuman') ?>" class="stretched-link">Pengumuman</a></h3>
             </div>
           </div><!-- End Card Item -->
 
           <!-- <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
             <div class="card">
 
-              <h3><a href="<?= site_url('webjadwal') ?>" class="stretched-link">Jadwal Pelayanan</a></h3>
+              <h3><a href="<?= site_url('WebJadwal') ?>" class="stretched-link">Jadwal Pelayanan</a></h3>
             </div>
           </div>End Card Item -->
 
           <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="400">
             <div class="card">
 
-              <h3><a href="<?= site_url('webdokumen') ?>" class="stretched-link">Dokumen</a></h3>
+              <h3><a href="<?= site_url('WebDokumen') ?>" class="stretched-link">Dokumen</a></h3>
             </div>
           </div><!-- End Card Item -->
 
           <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="500">
             <div class="card">
-              <h3><a href="<?= site_url('webgaleri') ?>" class="stretched-link">Galeri</a></h3>
+              <h3><a href="<?= site_url('WebGaleri') ?>" class="stretched-link">Galeri</a></h3>
             </div>
           </div><!-- End Card Item -->
 

@@ -85,30 +85,29 @@ class Dokumen extends CI_Controller
         $nama_dokumen = $this->input->post('nama_dokumen');
         $jns_dokumen = $this->input->post('jns_dokumen');
         $deskripsi = $this->input->post('deskripsi');
-        $file = $_FILES['file'];
-        if ($file = '') {
-        } else {
-            $config['upload_path']          = './assets/file/';
-            $config['allowed_types']        = 'pdf';
-
-            $this->load->library('upload', $config);
-            $this->upload->initialize($config);
-
-            if (!$this->upload->do_upload('file')) {
-                echo "Upload gagal";
-                die();
-            } else {
-                $file = $this->upload->data('file_name');
-            }
-        }
         $data = array(
             'tgl_dokumen' => $tgl_dokumen,
             'nama_dokumen' => $nama_dokumen,
             'jns_dokumen' => $jns_dokumen,
-            'deskripsi' => $deskripsi,
-            'file' => $file
+            'deskripsi' => $deskripsi
         );
 
+            $config['upload_path']          = './assets/file/';
+            $config['allowed_types']        = 'pdf|doc';
+
+            $this->load->library('upload', $config);
+            $this->upload->initialize($config);
+
+            if ($this->upload->do_upload('file')) {
+                $old_file = $data['dokumen']['file'];
+                if ($old_file != 'default.png') {
+                    unlink(FCPATH . './assets/file/' . $old_file);
+                }
+                $new_file = $this->upload->data('file_name');
+                $this->db->set('file', $new_file);
+            } else {
+                echo $this->upload->display_errors();
+            }
         $where = array(
             'no_dokumen' => $id
         );
@@ -117,17 +116,17 @@ class Dokumen extends CI_Controller
         redirect('dokumen/index');
     }
 
-    public function hapus($id){
+    public function hapus($id)
+    {
         $data['data_gereja'] = $this->db->get('data_gereja')->row_array();
         $data['title'] = "Hapus Dokumen";
         $this->load->view('templates/header', $data);
-        $this->load->view('templates/sidebar', $data); 
+        $this->load->view('templates/sidebar', $data);
         $dokumen = $this->m_dokumen->getByPrimaryKey($id);
         $data = array(
-           "dokumen" => $dokumen,
+            "dokumen" => $dokumen,
         );
         $this->load->view('dokumen/v_delete', $data);
-
     }
 
     function delete()

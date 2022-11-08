@@ -41,4 +41,10 @@ class M_jadwalPelayanan extends CI_Model{
     {
         return $this->db->where($this->primaryKey,$id)->delete($this->table);
     }
+
+    function update_data($where, $data, $table)
+	{
+		$this->db->where($where);
+		$this->db->update($table, $data);
+	}
 }

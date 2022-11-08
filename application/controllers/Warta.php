@@ -66,13 +66,13 @@ class Warta extends CI_Controller
             );
 
             $id = $this->ModelWarta->insertGetId($data);
-            $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
-               Data Berhasil Ditambahkan
+            // $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
+            //    Data Berhasil Ditambahkan
 
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                 <span aria-hidden="true">&times;</span>
-               </button>
-             </div>');
+            //     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            //      <span aria-hidden="true">&times;</span>
+            //    </button>
+            //  </div>');
             redirect('warta');
         }
     }
@@ -92,7 +92,7 @@ class Warta extends CI_Controller
 
     public function update()
     {
-        
+
         $config['upload_path']          = './assets/img/warta/';
         $config['allowed_types']        = 'gif|jpg|png|jpeg';
         $config['max_size']             = 10000;
@@ -100,37 +100,37 @@ class Warta extends CI_Controller
         $config['max_height']           = 10000;
 
         $this->load->library('upload',  $config);
-
-
-        if (!$this->upload->do_upload('userfile')) {
-            echo "Gambar Gagal Dikirim";
+        $judul_warta = $this->input->post('judul_warta', TRUE);
+        $ayat = $this->input->post('ayat', TRUE);
+        $isi_warta = $this->input->post('isi_warta', TRUE);
+        $tgl_warta = $this->input->post('tgl_warta', TRUE);
+        $id = $this->input->post('kd_warta');
+        $data = array(
+            "judul_warta" => $judul_warta,
+            "ayat" => $ayat,
+            "isi_warta" => $isi_warta,
+            "tgl_warta" => $tgl_warta
+        );
+        if ($this->upload->do_upload('userfile')) {
+            $old_image = $data['warta']['gambar'];
+            if ($old_image != 'default.png') {
+                unlink(FCPATH . './assets/img/warta/' . $old_image);
+            }
+            $new_image = $this->upload->data('file_name');
+            $this->db->set('gambar', $new_image);
         } else {
-
-            $gambar = $this->upload->data();
-            $gambar = $gambar['file_name'];
-            $judul_warta = $this->input->post('judul_warta', TRUE);
-            $ayat = $this->input->post('ayat', TRUE);
-            $isi_warta = $this->input->post('isi_warta', TRUE);
-            $tgl_warta = $this->input->post('tgl_warta', TRUE);
-            $id = $this->input->post('kd_warta');
-            $data = array(
-                "judul_warta" => $judul_warta,
-                "ayat" => $ayat,
-                "isi_warta" => $isi_warta,
-                "tgl_warta" => $tgl_warta,
-                "gambar" => $gambar
-            );
-
-            $id = $this->ModelWarta->update($id, $data);
-            $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
-               Data Berhasil Ditambahkan
-
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                 <span aria-hidden="true">&times;</span>
-               </button>
-             </div>');
-            redirect('warta');
+            echo $this->upload->display_errors();
         }
+
+        $id = $this->ModelWarta->update($id, $data);
+        // $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
+        //    Data Berhasil Ditambahkan
+
+        //     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        //      <span aria-hidden="true">&times;</span>
+        //    </button>
+        //  </div>');
+        redirect('warta');
     }
 
     public function hapus($id)

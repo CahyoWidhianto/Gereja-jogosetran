@@ -4,7 +4,7 @@
          <h3 class="card-title">Form Hapus Data Gembala</h3>
       </div>
       <div class="card-body">
-         <form id="form-delete-gembala" action="<?= site_url('profile/delete') ?>" method="post">
+         <form id="form-delete-gembala" action="<?= site_url('Profile/delete') ?>" method="post">
             <div class="form-group">
                <label for="">Nama Gembala</label>
                <input value="<?= $profile->nama_gembala ?>" readonly class="form-control col-5" name="nama_gembala" placeholder="Masukan Nama gembala " type="text">
@@ -14,7 +14,7 @@
             <input type="hidden" name="id_gembala" value="<?= $profile->id_gembala ?>">
       </div>
       <div class="card-footer">
-         <a class="btn btn-primary" href="<?= site_url('profile') ?>">
+         <a class="btn btn-primary" href="<?= site_url('Profile') ?>">
          <i class="fa fa-reply"></i> Kembali</a>
          <button class="btn btn-danger" id="btn-delete-gembala">
             <i class="fa fa-trash-alt"></i>

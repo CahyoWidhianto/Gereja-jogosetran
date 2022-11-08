@@ -4,7 +4,7 @@
             <h3 class="card-title">Form Hapus Jadwal</h3>
         </div>
         <div class="card-body">
-            <form id="form-delete-dokumen" action="<?= site_url('jadwalpelayanan/delete') ?>" method="post">
+            <form id="form-delete-dokumen" action="<?= site_url('JadwalPelayanan/delete') ?>" method="post">
 
                 <div class="form-group">
                     <label for="">Waktu Jadwal</label>
@@ -13,7 +13,7 @@
                 <input type="hidden" name="KD_jadwalpelayanan" value="<?= $jadwal->KD_jadwalpelayanan ?>">
         </div>
         <div class="card-footer">
-            <a class="btn btn-primary" href="<?= site_url('jadwalpelayanan') ?>">
+            <a class="btn btn-primary" href="<?= site_url('JadwalPelayanan') ?>">
                 <i class="fa fa-reply"></i> Kembali </a>
             </a>
             <button class="btn btn-danger" id="btn-hapus-dokumen">

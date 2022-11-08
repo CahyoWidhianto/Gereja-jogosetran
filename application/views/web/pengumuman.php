@@ -5,7 +5,7 @@
         <nav>
             <div class="container">
                 <ol>
-                    <li><a href="<?= base_url('web#media') ?>">Media</a></li>
+                    <li><a href="<?= base_url('Web#media') ?>">Media</a></li>
                     <li>Pengumuman</li>
                 </ol>
             </div>
@@ -52,7 +52,7 @@
         <nav>
             <div class="container">
                 <ol>
-                    <li><a href="<?= base_url('web#media') ?>">Media</a></li>
+                    <li><a href="<?= base_url('Web#media') ?>">Media</a></li>
                     <li>Jadwal Pelayanan</li>
                 </ol>
             </div>

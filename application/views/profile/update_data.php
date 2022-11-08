@@ -4,7 +4,7 @@
             <h3 class="card-title">Form Ubah Data Gembala</h3>
         </div>
         <div class="card-body">
-            <form id="form-update-gembala" action="<?= site_url('profile/update') ?>" method="post" enctype="multipart/form-data">
+            <form id="form-update-gembala" action="<?= site_url('Profile/update') ?>" method="post" enctype="multipart/form-data">
                 <input type="hidden" name="id_gembala" value="<?= $profile->id_gembala ?>">
                 <div class="form-group">
                     <label for="">Nama Gembala</label>
@@ -29,7 +29,7 @@
                     <div class="col-sm-5">
                         <div class="form-group">
                             <label for="">Gambar</label>
-                            <input type="file" class="form-control col-5" name="userfile" required size="20" id="gambar">
+                            <input type="file" class="form-control col-5" name="userfile" size="20" id="gambar">
                         </div>
                     </div>
                 </div>
@@ -37,7 +37,7 @@
 
         </div>
         <div class="card-footer">
-            <a class="btn btn-primary" href="<?= base_url('profile') ?>">
+            <a class="btn btn-primary" href="<?= base_url('Profile') ?>">
                 <i class="fa fa-reply"></i> Kembali</a>
             </a>
             <button class="btn btn-warning" id="btn-update-gembala">

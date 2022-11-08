@@ -4,7 +4,7 @@
          <h3 class="card-title">Form Tambah Dokumentasi </h3>
       </div>
       <div class="card-body">
-         <form action="<?= base_url('tema/insert') ?>" method="post" enctype="multipart/form-data">
+         <form action="<?= base_url('Tema/insert') ?>" method="post" enctype="multipart/form-data">
             <div class=" form-group">
                <label for="">Judul </label>
                <input type="text" class="form-control col-5" name="judul_tema" required placeholder="Masukan Judul Tema">
@@ -20,7 +20,7 @@
             </div>
       </div>
       <div class="card-footer">
-         <a class="btn btn-primary" href="<?= base_url('tema') ?>">
+         <a class="btn btn-primary" href="<?= base_url('Tema') ?>">
             <i class="fa fa-reply"></i> Kembali </a>
          </a>
          <button class="btn btn-success">

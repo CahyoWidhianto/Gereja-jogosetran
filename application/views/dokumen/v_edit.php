@@ -4,7 +4,7 @@
             <h3>Form Ubah Dokumen</h3>
         </div>
         <div class="card-body">
-            <?php echo form_open_multipart('dokumen/update') ?>
+            <?php echo form_open_multipart('Dokumen/update') ?>
             <?php foreach ($dokumen as $d) { ?>
                 <div class="form-group">
                     <label class="form-label">Nama Dokumen</label>
@@ -24,10 +24,10 @@
                 </div>
                 <div class="form-group">
                     <label class="form-label">File</label>
-                    <input require type="file" class="form-control" name="file" value="<?php echo $d->file ?>" required="file">
+                    <input require type="file" class="form-control" name="file" value="<?php echo $d->file ?>" >
                 </div>
                 <input type="hidden" name="no_dokumen" value="<?= $d->no_dokumen ?>">
-                <a href="<?= site_url('dokumen') ?>" class="btn btn-primary ">
+                <a href="<?= site_url('Dokumen') ?>" class="btn btn-primary ">
                     <i class="fa fa-reply"></i> Kembali </a>
                 <button type="submit" id="btn-save-dokumen" class="btn btn-success ">
                     <i class="fa fa-save"></i> Simpan

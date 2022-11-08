@@ -4,7 +4,7 @@
             <h3 class="card-title">Form Ubah Tema </h3>
         </div>
         <div class="card-body">
-            <form id="form-update-tema" method="post" action="<?= site_url('tema/update') ?>" enctype="multipart/form-data">
+            <form id="form-update-tema" method="post" action="<?= site_url('Tema/update') ?>" enctype="multipart/form-data">
                 <div class="row mb-3">
                     <label for="email" class="col-sm-2 col-form-label">Judul</label>
                     <div class="col-sm-10">
@@ -26,7 +26,7 @@
                             </div>
                             <div class="col-sm-9">
                                 <label class="form-label">Gambar</label>
-                                <input require type="file" class="form-control col-4" name="userfile" required="" multiple="200">
+                                <input require type="file" class="form-control col-4" name="userfile" multiple="200">
 
                             </div>
                         </div>
@@ -35,7 +35,7 @@
                 <input type="hidden" name="id_tema" value="<?= $tema->id_tema ?>">
         </div>
         <div class="card-footer">
-            <a class="btn btn-primary" href="<?= base_url('tema') ?>">
+            <a class="btn btn-primary" href="<?= base_url('Tema') ?>">
                 <i class="fa fa-reply"></i> Kembali </a>
             </a>
             <button class="btn btn-warning">

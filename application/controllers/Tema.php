@@ -83,7 +83,6 @@ class Tema extends CI_Controller
         $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar', $data);
         $this->load->view('content/tema/edit_data', $datatema);
-
     }
 
     public function update()
@@ -96,33 +95,31 @@ class Tema extends CI_Controller
 
         $this->load->library('upload',  $config);
         $this->load->library('upload', 'pdfgenerator');
-
-
-        if (!$this->upload->do_upload('userfile')) {
-            echo "Gambar Gagal Dikirim";
+        $judul_tema = $this->input->post('judul_tema', TRUE);
+        $isi_tema = $this->input->post('isi_tema', TRUE);
+        $id = $this->input->post('id_tema');
+        $data = array(
+            "judul_tema" => $judul_tema,
+            "isi_tema" => $isi_tema
+        );
+        if ($this->upload->do_upload('userfile')) {
+            $old_image = $data['tema']['gambar'];
+            if ($old_image != 'default.png') {
+                unlink(FCPATH . './assets/img/tema/' . $old_image);
+            }
+            $new_image = $this->upload->data('file_name');
+            $this->db->set('gambar', $new_image);
         } else {
-
-
-            $gambar = $this->upload->data();
-            $gambar = $gambar['file_name'];
-            $judul_tema = $this->input->post('judul_tema', TRUE);
-            $isi_tema = $this->input->post('isi_tema', TRUE);
-            $id = $this->input->post('id_tema');
-            $data = array(
-                "judul_tema" => $judul_tema,
-                "isi_tema" => $isi_tema,
-                "gambar" => $gambar
-            );
-
-            $id = $this->M_tema->update($id, $data);
-            $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
-             Data Berhasil Diedit
-             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-               <span aria-hidden="true">&times;</span>
-             </button>
-           </div>');
-            redirect('tema');
+            echo $this->upload->display_errors();
         }
+        $id = $this->M_tema->update($id, $data);
+        // $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
+        //      Data Berhasil Diedit
+        //      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        //        <span aria-hidden="true">&times;</span>
+        //      </button>
+        //    </div>');
+        redirect('tema');
     }
 
     public function hapus($id)
@@ -143,6 +140,6 @@ class Tema extends CI_Controller
     {
         $id = $this->input->post('id_tema');
         $this->M_tema->delete($id);
-        redirect ('tema');
+        redirect('tema');
     }
 }

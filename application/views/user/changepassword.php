@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col-lg-6">
             <?= $this->session->flashdata('message'); ?>
-            <form action="<?= base_url('user/changepassword'); ?>" method="post">
+            <form action="<?= base_url('User/changepassword'); ?>" method="post">
                 <div class="form-group">
                     <label for="current_password">Password Anda</label>
                     <input type="password" class="form-control" id="current_password" name="current_password">

@@ -6,7 +6,7 @@
         <nav>
             <div class="container">
                 <ol>
-                    <li><a href="<?= base_url('web#media') ?>">Media</a></li>
+                    <li><a href="<?= base_url('Web#media') ?>">Media</a></li>
                     <li>Dokumen</li>
                 </ol>
             </div>

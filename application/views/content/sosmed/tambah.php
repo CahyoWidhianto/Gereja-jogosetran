@@ -4,7 +4,7 @@
             <h3 class="card-title">Form Tambah Sosial Media</h3>
         </div>
         <div class="card-body">
-            <form id="" method="post" action="<?= site_url('sosmed/insert') ?>" enctype="multipart/form-data">
+            <form id="" method="post" action="<?= site_url('Sosmed/insert') ?>" enctype="multipart/form-data">
 
                 <div class="form-group">
                     <label class="form-label">Instagram</label>
@@ -20,7 +20,7 @@
                 </div>
 
                 <div class="card-footer">
-                    <a href="<?= site_url('sosmed') ?>" class="btn btn-primary ">
+                    <a href="<?= site_url('Sosmed') ?>" class="btn btn-primary ">
                         <i class="fa fa-reply"></i> Kembali
                     </a>
                     <button class="btn btn-success" id="btn-save-Gereja">

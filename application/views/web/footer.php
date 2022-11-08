@@ -12,11 +12,11 @@
             <div class="col-lg-2 col-6 footer-links">
                 <h4>Useful Links</h4>
                 <ul>
-                    <li><a href="<?= base_url('web#hero')?>">Home</a></li>
-                    <li><a href="<?= base_url('web#about')?>">About us</a></li>
-                    <li><a href="<?= base_url('web#pastor')?>">Pastor</a></li>
-                    <li><a href="<?= base_url('web#media')?>">Media</a></li>
-                    <li><a href="<?= base_url('web#location')?>">Location</a></li>
+                    <li><a href="<?= base_url('Web#hero')?>">Home</a></li>
+                    <li><a href="<?= base_url('Web#about')?>">About us</a></li>
+                    <li><a href="<?= base_url('Web#pastor')?>">Pastor</a></li>
+                    <li><a href="<?= base_url('Web#media')?>">Media</a></li>
+                    <li><a href="<?= base_url('Web#location')?>">Location</a></li>
                 </ul>
             </div>
 

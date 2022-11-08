@@ -4,7 +4,7 @@
             <h3 class="card-title">Form Tambah Pengumuman </h3>
         </div>
         <div class="card-body">
-            <form action="<?= base_url('pengumuman/insert') ?>" method="post" enctype="multipart/form-data">
+            <form action="<?= base_url('Pengumuman/insert') ?>" method="post" enctype="multipart/form-data">
                 <div class="form-group">
                     <label for="">Isi pengumuman</label>
                     <textarea required class="form-control col-5" name="isi_pengumuman" placeholder="Masukan Isi Pengumuman" type="text" required></textarea>
@@ -15,7 +15,7 @@
                 </div>
         </div>
         <div class="card-footer">
-            <a class="btn btn-primary" href="<?= base_url('pengumuman') ?>">
+            <a class="btn btn-primary" href="<?= base_url('Pengumuman') ?>">
                 <i class="fa fa-reply"></i> Kembali </a>
             </a>
             <button class="btn btn-success">

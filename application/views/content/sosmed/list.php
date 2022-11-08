@@ -7,7 +7,7 @@
                     <h3>Data Sosial Media</h3>
                 </div>
                 <div class="card-body">
-                    <a class="btn btn-outline-primary mb-3" href="<?= base_url('sosmed/tambah') ?>">
+                    <a class="btn btn-outline-primary mb-3" href="<?= base_url('Sosmed/tambah') ?>">
                         <i class="fa fa-plus"></i>Tambah Sosial Media
                     </a>
                     <div class="table-responsive">
@@ -32,10 +32,10 @@
                                         <td><?= $s->twt ?></td>
                                         <td><?= $s->fb ?></td>
                                         <td>
-                                            <a href="<?= site_url("sosmed/ubah/$s->id_sosmed") ?>" class="btn btn-sm btn-warning">
+                                            <a href="<?= site_url("Sosmed/ubah/$s->id_sosmed") ?>" class="btn btn-sm btn-warning">
                                                 <i class="fa fa-edit"></i>
                                             </a>
-                                            <a href="<?= site_url("sosmed/hapus/$s->id_sosmed") ?>" data-id="<?= $s->id_sosmed ?>" class="btn btn-danger btn-sm btn-delete-barang">
+                                            <a href="<?= site_url("Sosmed/hapus/$s->id_sosmed") ?>" data-id="<?= $s->id_sosmed ?>" class="btn btn-danger btn-sm btn-delete-barang">
                                                 <i class="fa fa-trash"></i>
                                             </a>
                                         </td>

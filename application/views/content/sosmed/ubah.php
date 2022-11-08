@@ -4,7 +4,7 @@
             <h3>Form Ubah Sosial Media</h3>
         </div>
         <div class="card-body">
-            <form  method="post" action="<?= site_url('sosmed/update') ?>" enctype="multipart/form-data">
+            <form  method="post" action="<?= site_url('Sosmed/update') ?>" enctype="multipart/form-data">
 
                 <div class="form-group">
                     <label class="form-label">Instagram</label>
@@ -25,7 +25,7 @@
                 <input type="hidden" name="id_sosmed" value="<?= $sosmed->id_sosmed ?>">
         </div>
         <div class="card-footer">
-            <a href="<?= site_url('sosmed') ?>" class="btn btn-primary">
+            <a href="<?= site_url('Sosmed') ?>" class="btn btn-primary">
                 <i class="fa fa-reply"></i> Kembali
             </a>
             <button class="btn btn-warning" id="btn-update-pengumuman">

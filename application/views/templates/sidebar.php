@@ -19,7 +19,7 @@
 
      <!-- Nav Item - Dashboard -->
      <li class="nav-item">
-         <a class="nav-link" href="<?= base_url('user/dashboard'); ?>">
+         <a class="nav-link" href="<?= base_url('User/dashboard'); ?>">
              <i class="fas fa-fw fa-tachometer-alt"></i>
              <span>Dashboard</span></a>
      </li>
@@ -33,60 +33,60 @@
      </div>
 
      <li class="nav-item">
-         <a class="nav-link" href="<?= base_url('user/profileAdmin'); ?>">
+         <a class="nav-link" href="<?= base_url('User/profileAdmin'); ?>">
              <i class="fas fa-fw fa-user"></i>
              <span>Profil Admin</span></a>
      </li>
 
      <li class="nav-item">
-         <a class="nav-link" href="<?= base_url('datagereja/index') ?>">
+         <a class="nav-link" href="<?= base_url('Datagereja/index') ?>">
              <i class="fas fa-fw fa-church"></i>
              <span>Kelola data Gereja</span></a>
      </li>
 
      <li class="nav-item">
-         <a class="nav-link" href="<?= base_url('profile/index'); ?>">
+         <a class="nav-link" href="<?= base_url('Profile/index'); ?>">
              <i class="fas fa-users"></i>
              <span>Kelola Profil Gembala</span></a>
      </li>
 
      <li class="nav-item">
-         <a class="nav-link" href="<?= base_url('pengumuman/index'); ?>">
+         <a class="nav-link" href="<?= base_url('Pengumuman/index'); ?>">
              <i class="fas fa-bullhorn"></i>
              <span>Kelola Pengumuman</span></a>
      </li>
 
      <li class="nav-item">
-         <a class="nav-link" href="<?= base_url('warta/index'); ?>">
+         <a class="nav-link" href="<?= base_url('Warta/index'); ?>">
              <i class="fas fa-book-open"></i>
              <span>Kelola Warta</span></a>
      </li>
 
      <li class="nav-item">
-         <a class="nav-link" href="<?= base_url('dokumen/index') ?>">
+         <a class="nav-link" href="<?= base_url('Dokumen/index') ?>">
              <i class="fas fa-folder-open"></i>
              <span>Kelola Dokumen</span></a>
      </li>
 
      <li class="nav-item">
-         <a class="nav-link" href="<?= base_url('uploadgambar/index') ?>">
+         <a class="nav-link" href="<?= base_url('Uploadgambar/index') ?>">
              <i class="fa fa-images"></i>
              <span>Galeri</span></a>
      </li>
 
      <li class="nav-item">
-         <a class="nav-link" href="<?= base_url('jadwalpelayanan/index') ?>">
+         <a class="nav-link" href="<?= base_url('JadwalPelayanan/index') ?>">
              <i class="fas fa-clipboard-list"></i>
              <span>Kelola Jadwal Pelayanan</span></a>
      </li>
 
      <li class="nav-item">
-         <a class="nav-link" href="<?= base_url('tema/index') ?>">
+         <a class="nav-link" href="<?= base_url('Tema/index') ?>">
              <i class="fa fa-palette"></i>
              <span>Kelola Tema</span></a>
      </li>
      <li class="nav-item">
-         <a class="nav-link" href="<?= base_url('sosmed/index') ?>">
+         <a class="nav-link" href="<?= base_url('Sosmed/index') ?>">
              <i class="far fa-bell"></i>
              <span>Kelola Sosial Media</span></a>
      </li>
@@ -94,7 +94,7 @@
      <hr class="sidebar-divider">
 
      <li class="nav-item">
-         <a class="nav-link" href="<?= base_url('auth/logout'); ?>" data-toggle="modal" data-target="#logoutModal">
+         <a class="nav-link" href="<?= base_url('Auth/logout'); ?>" data-toggle="modal" data-target="#logoutModal">
              <i class="fas fa-sign-out-alt fa-fw "></i>
              <span>Logout</span>
          </a>

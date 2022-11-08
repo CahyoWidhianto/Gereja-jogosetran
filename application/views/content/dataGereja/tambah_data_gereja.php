@@ -4,7 +4,7 @@
          <h3 class="card-title">Form Tambah Data Gereja</h3>
       </div>
       <div class="card-body">
-         <form id="form-add-gereja" action="<?= site_url('datagereja/insert') ?>" method="post" enctype="multipart/form-data">
+         <form id="form-add-gereja" action="<?= site_url('DataGereja/insert') ?>" method="post" enctype="multipart/form-data">
             <div class="row">
 
                <div class="col-sm-6">
@@ -54,7 +54,7 @@
             </div>
       </div>
       <div class="card-footer">
-         <a class="btn btn-primary" href="<?= site_url('dataGereja/index') ?>">
+         <a class="btn btn-primary" href="<?= site_url('DataGereja/index') ?>">
             <i class="fa fa-reply"></i> Kembali</a>
          <button class="btn btn-success" id="btn-save-Gereja">
             <i class="fa fa-save"></i>
