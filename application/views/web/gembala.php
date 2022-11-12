@@ -26,7 +26,7 @@
         <div class="col-lg-6 content order-last  order-lg-first">
           <h3><?= $profile_gembala['nama_gembala'] ?></h3>
           <p>
-            <?= $profile_gembala['deskripsi_gembala'] ?>
+            <?= $profile_gembala['deskripsi_gembala'] ?><br>
           </p>
           <p>
             <?= $profile_gembala['riwayat_pendidikan'] ?>

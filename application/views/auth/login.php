@@ -39,9 +39,9 @@
 
                                 </form>
                                 <hr>
-                                <div class="text-center">
-                                    <a class="small" href="forgot-password.html">Ubah Password?</a>
-                                </div>
+                                <!-- <div class="text-center">
+                                    <a class="small" href="User/changePassword">Ubah Password?</a>
+                                </div> -->
 
                             </div>
                         </div>

@@ -13,7 +13,7 @@
                     <label class="form-label">Berkas</label>
                     <input require type="file" class="form-control" name="file" value="<?php echo $jadwal->Berkas ?>">
                 </div>
-                <input type="hidden" name="no_dokumen" value="<?= $jadwal->KD_jadwalpelayanan ?>">
+                <input type="hidden" name="KD_jadwalpelayanan" value="<?= $jadwal->KD_jadwalpelayanan ?>">
                 <a href="<?= site_url('JadwalPelayanan') ?>" class="btn btn-primary ">
                     <i class="fa fa-reply"></i> Kembali </a>
                 <button type="submit" id="btn-save-dokumen" class="btn btn-success ">

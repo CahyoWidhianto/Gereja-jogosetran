@@ -77,35 +77,65 @@ class JadwalPelayanan extends CI_Controller
       $this->load->view('jadwal/edit', $data);
    }
 
-   public function update()
-   {
-      $id = $this->input->post('KD_jadwalpelayanan');
-      $waktu = $this->input->post('waktu');
-      $Berkas = $_FILES['file'];
-      if ($Berkas = '') {
-      } else {
-         $config['upload_path']          = './assets/jadwal/';
-         $config['allowed_types']        = 'pdf';
+   // public function update()
+   // {
+   //    $id = $this->input->post('KD_jadwalpelayanan');
+   //    $waktu = $this->input->post('waktu');
+   //    $Berkas = $_FILES['file'];
+   //    if ($Berkas = '') {
+   //    } else {
+   //       $config['upload_path']          = './assets/jadwal/';
+   //       $config['allowed_types']        = 'pdf';
 
-         $this->load->library('upload', $config);
-         $this->upload->initialize($config);
+   //       $this->load->library('upload', $config);
+   //       $this->upload->initialize($config);
 
-         if (!$this->upload->do_upload('file')) {
-            echo "Upload gagal";
-            die();
-         } else {
-            $Berkas = $this->upload->data('file_name');
-         }
-      }
-      $data = array(
-         'Waktu' => $waktu,
-         'Berkas' => $Berkas
-      );
+   //       if (!$this->upload->do_upload('file')) {
+   //          echo "Upload gagal";
+   //          die();
+   //       } else {
+   //          $Berkas = $this->upload->data('file_name');
+   //       }
+   //    }
+   //    $data = array(
+   //       'Waktu' => $waktu,
+   //       'Berkas' => $Berkas
+   //    );
 
 
-      $this->M_jadwalPelayanan->update($id, $data);
-      redirect('jadwalpelayanan');
-   }
+   //    $this->M_jadwalPelayanan->update($id, $data);
+   //    redirect('jadwalpelayanan');
+   // }
+
+
+   function update()
+    {
+        $id = $this->input->post('KD_jadwalpelayanan');
+        $waktu = $this->input->post('waktu');
+        $data = array(
+            'Waktu' => $waktu
+        );
+
+            $config['upload_path']          = './assets/jadwal/';
+            $config['allowed_types']        = 'pdf|doc';
+
+            $this->load->library('upload', $config);
+            $this->upload->initialize($config);
+
+            if ($this->upload->do_upload('file')) {
+                $old_file = $data['jadwalpelayanan']['Berkas'];
+                if ($old_file != 'default.png') {
+                    unlink(FCPATH . './assets/jadwal/' . $old_file);
+                }
+                $new_file = $this->upload->data('file_name');
+                $this->db->set('Berkas', $new_file);
+            } else {
+                echo $this->upload->display_errors();
+            }
+
+        $id = $this->M_jadwalPelayanan->update($id,$data);
+        redirect('JadwalPelayanan/index');
+    }
    
    public function hapus($id)
    {
