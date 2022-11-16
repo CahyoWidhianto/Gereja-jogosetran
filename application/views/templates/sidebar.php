@@ -79,6 +79,12 @@
              <i class="fas fa-clipboard-list"></i>
              <span>Kelola Jadwal Pelayanan</span></a>
      </li>
+     
+     <li class="nav-item">
+         <a class="nav-link" href="<?= base_url('Ibadah/index') ?>">
+             <i class="fas fa-clipboard-list"></i>
+             <span>Kelola Jadwal Ibadah</span></a>
+     </li>
 
      <li class="nav-item">
          <a class="nav-link" href="<?= base_url('Tema/index') ?>">
