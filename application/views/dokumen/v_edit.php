@@ -16,7 +16,7 @@
                 </div>
                 <div class="form-group">
                     <label class="form-label">Deskripsi Dokumen</label>
-                    <input require type="text" class="form-control" name="deskripsi" value="<?php echo $d->deskripsi ?>" required="deskripsi">
+                    <textarea require type="text" class="form-control" name="deskripsi" " required="deskripsi"><?php echo $d->deskripsi ?></textarea>
                 </div>
                 <div class="form-group">
                     <label class="form-label">Tanggal Dokumen</label>

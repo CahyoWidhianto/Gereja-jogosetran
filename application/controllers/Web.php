@@ -10,6 +10,7 @@ class Web extends CI_Controller
         $data['warta'] = $this->db->get('warta')->row_array();
         $data['dokumen'] = $this->db->get('dokumen')->row_array();
         $data['gambar'] = $this->db->get('gambar')->row_array();
+        $data['ibadah'] = $this->db->get('ibadah')->result_array();
         $data['jadwalpelayanan'] = $this->db->get('jadwalpelayanan')->row_array();
         $data['pengumuman'] = $this->db->get('pengumuman')->row_array();
         $data['sosial_media'] = $this->db->get('sosial_media')->row_array();

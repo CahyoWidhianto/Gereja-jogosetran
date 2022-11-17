@@ -58,6 +58,7 @@
           <li><a href="<?= base_url('Web#hero') ?>" class="active">Home</a></li>
           <li><a href="<?= base_url('Web#about') ?>">About Us</a></li>
           <li><a href="<?= base_url('Web#pastor') ?>"> Pastor</a></li>
+          <li><a href="<?= base_url('Web#ibadah') ?>"> Jadwal Ibadah</a></li>
           <li><a href="<?= base_url('Web#media') ?>">Media</a></li>
           <li><a href="<?= base_url('Web#location') ?>">Location</a></li>
           <li><a href="<?= base_url('Web#footer') ?>">Contact</a></li>

@@ -39,6 +39,12 @@
      </li>
 
      <li class="nav-item">
+         <a class="nav-link" href="<?= base_url('Tema/index') ?>">
+             <i class="fa fa-palette"></i>
+             <span>Kelola Tema</span></a>
+     </li>
+
+     <li class="nav-item">
          <a class="nav-link" href="<?= base_url('Datagereja/index') ?>">
              <i class="fas fa-fw fa-church"></i>
              <span>Kelola data Gereja</span></a>
@@ -51,15 +57,27 @@
      </li>
 
      <li class="nav-item">
-         <a class="nav-link" href="<?= base_url('Pengumuman/index'); ?>">
-             <i class="fas fa-bullhorn"></i>
-             <span>Kelola Pengumuman</span></a>
+         <a class="nav-link" href="<?= base_url('Ibadah/index') ?>">
+             <i class="fas fa-clipboard-list"></i>
+             <span>Kelola Jadwal Ibadah</span></a>
      </li>
 
      <li class="nav-item">
          <a class="nav-link" href="<?= base_url('Warta/index'); ?>">
              <i class="fas fa-book-open"></i>
              <span>Kelola Warta</span></a>
+     </li>
+
+     <li class="nav-item">
+         <a class="nav-link" href="<?= base_url('Pengumuman/index'); ?>">
+             <i class="fas fa-bullhorn"></i>
+             <span>Kelola Pengumuman</span></a>
+     </li>
+
+     <li class="nav-item">
+         <a class="nav-link" href="<?= base_url('JadwalPelayanan/index') ?>">
+             <i class="fas fa-clipboard-list"></i>
+             <span>Kelola Jadwal Pelayanan</span></a>
      </li>
 
      <li class="nav-item">
@@ -75,23 +93,6 @@
      </li>
 
      <li class="nav-item">
-         <a class="nav-link" href="<?= base_url('JadwalPelayanan/index') ?>">
-             <i class="fas fa-clipboard-list"></i>
-             <span>Kelola Jadwal Pelayanan</span></a>
-     </li>
-     
-     <li class="nav-item">
-         <a class="nav-link" href="<?= base_url('Ibadah/index') ?>">
-             <i class="fas fa-clipboard-list"></i>
-             <span>Kelola Jadwal Ibadah</span></a>
-     </li>
-
-     <li class="nav-item">
-         <a class="nav-link" href="<?= base_url('Tema/index') ?>">
-             <i class="fa fa-palette"></i>
-             <span>Kelola Tema</span></a>
-     </li>
-     <li class="nav-item">
          <a class="nav-link" href="<?= base_url('Sosmed/index') ?>">
              <i class="far fa-bell"></i>
              <span>Kelola Sosial Media</span></a>
@@ -105,10 +106,7 @@
              <span>Logout</span>
          </a>
      </li>
-
-
-
-
+     
      <!-- Sidebar Toggler (Sidebar) -->
      <div class="text-center d-none d-md-inline">
          <button class="rounded-circle border-0" id="sidebarToggle"></button>

@@ -99,9 +99,53 @@
         </div>
       </div>
   </div>
-
   </section>
   <!-- End pastor Section -->
+
+  <!-- jadwal ibadah -->
+  <div class="breadcrumbs">
+    <nav>
+      <div class="container">
+        <ol>
+          <li><a href="#ibadah">Home</a></li>
+          <li>Jadwal Ibadah</li>
+        </ol>
+      </div>
+    </nav>
+    <section id="ibadah" class="services pt-0">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <span>Jadwal Ibadah</span>
+          <h2>Jadwal Ibadah</h2>
+
+        </div>
+
+        <div class="row gy-4">
+
+          <?php
+          $no = 1;
+          foreach ($ibadah as $i) {
+          ?>
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+              <div class="card">
+                
+                <h3><a href="" class="stretched-link"><?=$i['nama']?></a></h3>
+                <p><?=$i['hari']?> <?= $i['jam']?></p>
+              </div>
+            </div><!-- End Card Item -->
+
+          <?php
+          }
+          ?>
+        </div>
+      </div>
+  </div>
+  </section><!-- end jadwal ibadah -->
+
+
+
+
 
 
 

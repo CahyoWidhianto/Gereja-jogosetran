@@ -37,7 +37,7 @@ class Profile extends CI_Controller
   public function insert()
   {
     $config['upload_path']          = './assets/img/profileGembala/';
-    $config['allowed_types']        = 'gif|jpg|png';
+    $config['allowed_types']        = 'gif|jpg|png|jpeg';
     $config['max_size']             = 10000;
     $config['max_width']            = 10000;
     $config['max_height']           = 10000;
@@ -62,7 +62,7 @@ class Profile extends CI_Controller
         "gambar" => $gambar
 
       );
-      $id = $this->ProfileGembala->insertGetId($data);
+      $this->ProfileGembala->insertGetId($data);
     }
     $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
     Data Berhasil Ditambahkan
@@ -90,10 +90,10 @@ class Profile extends CI_Controller
   public function update()
   {
     $config['upload_path']          = './assets/img/profileGembala/';
-    $config['allowed_types']        = 'gif|jpg|png';
+    $config['allowed_types']        = 'gif|jpg|png|jpeg';
     $config['max_size']             = 10000;
-    $config['max_width']            = 10000;
-    $config['max_height']           = 10000;
+    // $config['max_width']            = 10000;
+    // $config['max_height']           = 10000;
 
     $this->load->library('upload', $config);
 
