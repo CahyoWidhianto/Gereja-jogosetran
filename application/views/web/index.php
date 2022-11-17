@@ -50,6 +50,11 @@
           <ul class="text-center">
 
             <div>
+              <h5>Tanggal Berdiri Gereja</h5>
+              <p>Gereja ini berdiri pada tanggal <?= $data_gereja['tgl_berdiri_gereja'] ?></p>
+            </div>
+
+            <div>
               <h5>Visi Gereja</h5>
               <p><?= $data_gereja['visi_gereja'] ?></p>
             </div>

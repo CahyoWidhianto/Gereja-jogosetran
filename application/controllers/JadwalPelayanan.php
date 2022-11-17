@@ -41,7 +41,7 @@ class JadwalPelayanan extends CI_Controller
       if ($Berkas = '') {
       } else {
          $config['upload_path']          = './assets/jadwal/';
-         $config['allowed_types']        = 'pdf';
+         $config['allowed_types']        = 'pdf|docx';
 
          $this->load->library('upload', $config);
          $this->upload->initialize($config);
@@ -117,7 +117,7 @@ class JadwalPelayanan extends CI_Controller
         );
 
             $config['upload_path']          = './assets/jadwal/';
-            $config['allowed_types']        = 'pdf|doc';
+            $config['allowed_types']        = 'pdf|docx';
 
             $this->load->library('upload', $config);
             $this->upload->initialize($config);
