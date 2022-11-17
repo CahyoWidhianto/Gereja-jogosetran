@@ -24,7 +24,7 @@
                             <tbody>
                                 <?php
                                 $no = 1;
-                                foreach ($ibadah as $i) {
+                                foreach (array_reverse($ibadah) as $i) {
                                 ?>
                                     <tr>
                                         <td><?= $no++ ?></td>

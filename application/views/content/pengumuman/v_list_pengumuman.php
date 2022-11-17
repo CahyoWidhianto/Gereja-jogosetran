@@ -23,7 +23,7 @@
                             <tbody>
                                 <?php
                                 $no = 1;
-                                foreach ($pengumumans as $p) {
+                                foreach (array_reverse($pengumumans) as $p) {
                                 ?>
                                     <tr>
                                         <td><?= $no++ ?></td>

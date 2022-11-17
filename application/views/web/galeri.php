@@ -23,7 +23,7 @@
                         <div class="row order-last  order-lg-first content">
                             <?php
                             $no = 1;
-                            foreach ($gambars as $g) {
+                            foreach (array_reverse($gambars) as $g) {
                             ?>
                                 <div class="col-lg-4 col-md-6 d-flex mt-3">
                                     <div class="card">

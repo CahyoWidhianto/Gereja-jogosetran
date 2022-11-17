@@ -27,7 +27,7 @@
                             <tbody>
                                 <?php
                                 $no = 1;
-                                foreach ($dokumen as $d) {
+                                foreach (array_reverse($dokumen) as $d) {
                                 ?>
                                     <tr>
                                         <td><?= $no++ ?></td>

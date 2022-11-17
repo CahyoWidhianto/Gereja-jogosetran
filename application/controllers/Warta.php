@@ -37,7 +37,7 @@ class Warta extends CI_Controller
     public function insert()
     {
         $config['upload_path']          = './assets/img/warta/';
-        $config['allowed_types']        = 'jpg';
+        $config['allowed_types']        = 'jpg|png|gif|jpeg';
         $config['max_size']             = 10000;
         $config['max_width']            = 10000;
         $config['max_height']           = 10000;

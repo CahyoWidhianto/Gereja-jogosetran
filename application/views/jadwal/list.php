@@ -24,7 +24,7 @@
                             <tbody>
                                 <?php
                                 $no = 1;
-                                foreach ($jadwal as $j) {
+                                foreach (array_reverse($jadwal) as $j) {
                                 ?>
                                     <tr>
                                         <td><?= $no++ ?></td>

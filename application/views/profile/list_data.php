@@ -29,7 +29,7 @@
                      <tbody>
                         <?php
                         $no = 1;
-                        foreach ($profiles as $p) {
+                        foreach (array_reverse($profiles) as $p) {
                         ?>
                            <tr>
                               <td><?= $no++ ?></td>

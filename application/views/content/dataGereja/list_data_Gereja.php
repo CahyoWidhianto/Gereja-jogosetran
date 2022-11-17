@@ -31,7 +31,7 @@
                         <tbody>
                            <?php
                            $no = 1;
-                           foreach ($gerejas as $gereja) {
+                           foreach (array_reverse($gerejas) as $gereja) {
                            ?>
                               <tr>
                                  <td><?= $no++ ?></td>

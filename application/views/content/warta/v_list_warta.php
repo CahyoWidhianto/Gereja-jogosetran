@@ -28,7 +28,7 @@
                         <tbody>
                            <?php
                            $no = 1;
-                           foreach ($wartas as $w) {
+                           foreach (array_reverse($wartas) as $w) {
                            ?>
                               <tr>
                                  <td><?= $no++ ?></td>
