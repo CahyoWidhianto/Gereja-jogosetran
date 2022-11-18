@@ -8,6 +8,10 @@ class JadwalPelayanan extends CI_Controller
       parent::__construct();
       $this->load->model('M_jadwalPelayanan');
       $this->load->helper('form', 'url');
+      $this->load->library('form_validation');
+      if (!$this->session->userdata('email')) {
+         redirect('auth');
+      }
    }
 
    public function index()
@@ -109,34 +113,34 @@ class JadwalPelayanan extends CI_Controller
 
 
    function update()
-    {
-        $id = $this->input->post('KD_jadwalpelayanan');
-        $waktu = $this->input->post('waktu');
-        $data = array(
-            'Waktu' => $waktu
-        );
+   {
+      $id = $this->input->post('KD_jadwalpelayanan');
+      $waktu = $this->input->post('waktu');
+      $data = array(
+         'Waktu' => $waktu
+      );
 
-            $config['upload_path']          = './assets/jadwal/';
-            $config['allowed_types']        = 'pdf|docx';
+      $config['upload_path']          = './assets/jadwal/';
+      $config['allowed_types']        = 'pdf|docx';
 
-            $this->load->library('upload', $config);
-            $this->upload->initialize($config);
+      $this->load->library('upload', $config);
+      $this->upload->initialize($config);
 
-            if ($this->upload->do_upload('file')) {
-                $old_file = $data['jadwalpelayanan']['Berkas'];
-                if ($old_file != 'default.png') {
-                    unlink(FCPATH . './assets/jadwal/' . $old_file);
-                }
-                $new_file = $this->upload->data('file_name');
-                $this->db->set('Berkas', $new_file);
-            } else {
-                echo $this->upload->display_errors();
-            }
+      if ($this->upload->do_upload('file')) {
+         $old_file = $data['jadwalpelayanan']['Berkas'];
+         if ($old_file != 'default.png') {
+            unlink(FCPATH . './assets/jadwal/' . $old_file);
+         }
+         $new_file = $this->upload->data('file_name');
+         $this->db->set('Berkas', $new_file);
+      } else {
+         echo $this->upload->display_errors();
+      }
 
-        $id = $this->M_jadwalPelayanan->update($id,$data);
-        redirect('JadwalPelayanan/index');
-    }
-   
+      $id = $this->M_jadwalPelayanan->update($id, $data);
+      redirect('JadwalPelayanan/index');
+   }
+
    public function hapus($id)
    {
       $data['data_gereja'] = $this->db->get('data_gereja')->row_array();

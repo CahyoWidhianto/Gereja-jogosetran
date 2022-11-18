@@ -7,6 +7,10 @@ class UploadGambar extends CI_Controller
     {
         parent::__construct();
         $this->load->model("ModelGambar");
+        $this->load->library('form_validation');
+        if (!$this->session->userdata('email')) {
+            redirect('auth');
+        }
     }
     public function index()
     {
@@ -110,7 +114,7 @@ class UploadGambar extends CI_Controller
 
     public function hapus($id)
     {
-        
+
         $gambar = $this->ModelGambar->getByPrimaryKey($id);
         $gambar = array(
             "gambar" => $gambar,

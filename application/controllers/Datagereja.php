@@ -2,10 +2,14 @@
 defined('BASEPATH') or exit('No direct script access allowed');
 class Datagereja extends CI_Controller
 {
-   function __construct()  
+   function __construct()
    {
       parent::__construct();
       $this->load->model("ModelGereja");
+      $this->load->library('form_validation');
+      if (!$this->session->userdata('email')) {
+         redirect('auth');
+      }
    }
    public function index()
    {
@@ -122,7 +126,7 @@ class Datagereja extends CI_Controller
          $this->db->set('url_logo_gereja', $new_image);
       } else {
          echo $this->upload->display_errors();
-       }
+      }
       $this->ModelGereja->update($id, $data);
       redirect('dataGereja');
    }

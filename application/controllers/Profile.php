@@ -7,6 +7,10 @@ class Profile extends CI_Controller
   {
     parent::__construct();
     $this->load->model("ProfileGembala");
+    $this->load->library('form_validation');
+      if (!$this->session->userdata('email')) {
+         redirect('auth');
+      }
   }
   public function index()
   {

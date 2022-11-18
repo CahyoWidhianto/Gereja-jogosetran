@@ -8,6 +8,10 @@ class Dokumen extends CI_Controller
         parent::__construct();
         $this->load->model('m_dokumen');
         $this->load->helper('form', 'url');
+        $this->load->library('form_validation');
+        if (!$this->session->userdata('email')) {
+            redirect('auth');
+        }
     }
 
     function index()
@@ -92,22 +96,22 @@ class Dokumen extends CI_Controller
             'deskripsi' => $deskripsi
         );
 
-            $config['upload_path']          = './assets/file/';
-            $config['allowed_types']        = 'pdf|document|docx';
+        $config['upload_path']          = './assets/file/';
+        $config['allowed_types']        = 'pdf|document|docx';
 
-            $this->load->library('upload', $config);
-            $this->upload->initialize($config);
+        $this->load->library('upload', $config);
+        $this->upload->initialize($config);
 
-            if ($this->upload->do_upload('file')) {
-                $old_file = $data['dokumen']['file'];
-                if ($old_file != 'default.png') {
-                    unlink(FCPATH . './assets/file/' . $old_file);
-                }
-                $new_file = $this->upload->data('file_name');
-                $this->db->set('file', $new_file);
-            } else {
-                echo $this->upload->display_errors();
+        if ($this->upload->do_upload('file')) {
+            $old_file = $data['dokumen']['file'];
+            if ($old_file != 'default.png') {
+                unlink(FCPATH . './assets/file/' . $old_file);
             }
+            $new_file = $this->upload->data('file_name');
+            $this->db->set('file', $new_file);
+        } else {
+            echo $this->upload->display_errors();
+        }
         $where = array(
             'no_dokumen' => $id
         );
